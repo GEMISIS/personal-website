@@ -122,3 +122,4 @@ function setupPage(activePage) {
     generateNavBar(activePage);
     setupConfig(activePage);
 }
+
