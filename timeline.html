@@ -5,6 +5,7 @@
     <head>
         <link href="css/social.css" rel="stylesheet">
         <link href="css/theme.css" rel="stylesheet" >
+        <link href="css/timelines.css" rel="stylesheet" >
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" >
         <link src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -13,6 +14,7 @@
 
         <!-- Include these two scripts first since they'll be used later. -->
         <script src="js/core.js"></script>
+        <script src="js/timeline.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
@@ -24,18 +26,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul id="navbar_links" class="navbar-nav mr-auto">
-                    </ul>
+                    <ul id="navbar_links" class="navbar-nav mr-auto"></ul>
                 </div>
             </nav>
         </header>
 
         <!-- The main part where the content should go! -->
         <main role="main" class="container">
-            <div class="text-center center-block">
-                <h1>
-                    Website under construction...
-                </h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center center-block">Career Timeline</h1>
+                    <p id="timeline_description"></p>
+                    <ul id="timeline_items" class="timeline"></ul>
+                </div>
             </div>
         </main>
 
@@ -46,7 +49,8 @@
         </footer>
 
         <script>
-            setupPage("Work");
+            setupPage("Timeline");
+            generateTimeline();
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>

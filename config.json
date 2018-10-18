@@ -20,6 +20,116 @@
         "Career Advice",
         "Old Contact"
     ],
+    "user_timeline": [
+        {
+            "date": "2010-06",
+            "title": "High School Graduation",
+            "subtitle": "Mount Vernon High School",
+            "type": "education",
+            "image": "https://mountvernonhs.fcps.edu/sites/default/files/logo.png",
+            "description": "On this date, I graduated from Mount Vernon High School in Mount Vernon, Virginia. I finished with a GPA of 3.55 and an Advanced Diploma."
+        },
+        {
+            "date": "2011-02",
+            "title": "Faculty Support Worker",
+            "subtitle": "Christopher Newport University",
+            "type": "career",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "Began working as a student employee, helping students and faculty with hardware, software, and network issues. Helped with issues in classrooms, residence halls, and other buildings on campus."
+        },
+        {
+            "date": "2012-10",
+            "title": "Faculty Support Worker",
+            "subtitle": "Christopher Newport University",
+            "type": "career",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "Left to explore new opportunities."
+        },
+        {
+            "date": "2012-03",
+            "title": "Software Developer Intern",
+            "subtitle": "Perfect Commerce",
+            "type": "career",
+            "image": "http://saintscapital.com/wp-content/uploads/2015/08/perfect-commerce.png",
+            "description": "Began working as a Softare Developer Intern at Perfect Commerce (now called proactis). Helped to develop automated test cases in Selenium with Java. Also helped debug, fix, and enhance current and legacy code using ASP.NET in C# and JavaScript."
+        },
+        {
+            "date": "2013-04",
+            "title": "Software Developer Intern",
+            "subtitle": "Perfect Commerce",
+            "type": "career",
+            "image": "http://saintscapital.com/wp-content/uploads/2015/08/perfect-commerce.png",
+            "description": "Left to explore new opportunities."
+        },
+        {
+            "date": "2012-10",
+            "title": "Software Engineer",
+            "subtitle": "CW Optics",
+            "type": "career",
+            "image": "http://www.cwoptics.com/img/woundimager.png",
+            "description": "Helped to develop the software for usage of the WoundImager device. Implemented various algorithms created by the company, including one which was used to calculate the velocity of blood through wounds on images gathered from the device."
+        },
+        {
+            "date": "2013-04",
+            "title": "Software Engineer",
+            "subtitle": "CW Optics",
+            "type": "career",
+            "image": "http://www.cwoptics.com/img/woundimager.png",
+            "description": "Left to explore new opportunities."
+        },
+        {
+            "date": "2014-06",
+            "title": "Research and Development Intern",
+            "subtitle": "Swisslog",
+            "type": "career",
+            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "description": "Researched new technologies to use for warehouse management, including hardware, software, usability, ease-of-access, safety, and more. Specifically developed rapid prototypes on hardware such as Google Glass and demonstrated to various executives both at Swisslog and outside of the company."
+        },
+        {
+            "date": "2015-01",
+            "title": "Software Engineer",
+            "subtitle": "Swisslog",
+            "type": "career",
+            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "description": "Switched from an intern to a full time Software Engineer at Swisslog. Worked on a variety of projects, including continuing R&D work, helping to improve documentation for certain products (reducing setup time by as much 60%), and mainted a 100% deployment success rate with no rollbacks being required for my changes on products."
+        },
+        {
+            "date": "2016-03",
+            "title": "Software Engineer",
+            "subtitle": "Swisslog",
+            "type": "career",
+            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "description": "Left to explore new opportunities."
+        },
+        {
+            "date": "2016-04",
+            "title": "Software Development Engineer",
+            "subtitle": "Amazon",
+            "type": "career",
+            "image": "http://mediad.publicbroadcasting.net/p/wkar/files/styles/medium/public/201706/10398927_9465478123_740_n.jpg",
+            "description": "Working on the Alexa on Tablets to help bring Alexa to Amazon's Fire Tablets. I do a combination of Android development, server-side work, and Android source development."
+        },
+        {
+            "date": "2014-12",
+            "title": "University Graduation",
+            "subtitle": "Christopher Newport University",
+            "type": "education",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "On this date, I completed my undergraduate degrees in <b>Computer Engineering</b> and <b>Computer Science</b> at Christopher Newport University."
+        },
+        {
+            "date": "2010-08",
+            "title": "Began Undergraduate Degrees",
+            "subtitle": "Christopher Newport University",
+            "type": "education",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "On this date, I began my undergraduate degrees in <b>Computer Engineering</b> and <b>Computer Science</b> at Christopher Newport University."
+        }
+    ],
+    "timeline_settings": {
+        "chronological": false,
+        "description": ""
+    },
     "social_medias": [
         {
             "id": "social-fb",
@@ -86,7 +196,7 @@
         }
     ],
     "site_keys": {
-        "google_recaptcha_key": "TBD",
-        "google_site_ver_key": "TBD"
+        "google_recaptcha_key": "6LdMTnQUAAAAAHvUuNoKQVXbdgqTh1_I1lWtUVb9",
+        "google_site_ver_key": "hApVs1CQ5Bqgldi_rx3-CKRikHGMsw9Ju21EYHgB2sA"
     }
 }

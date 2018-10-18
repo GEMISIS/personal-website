@@ -2,6 +2,7 @@
     -webkit-transform: scale(0.95);
     -moz-transform: scale(0.95);
     -o-transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .social {
@@ -9,8 +10,10 @@
     -webkit-transform: scale(0.8);
     /* Browser Variations: */
 
+    transform: scale(0.8);
     -moz-transform: scale(0.8);
     -o-transform: scale(0.8);
+    transition-duration: 0.5s;
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;

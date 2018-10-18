@@ -17,8 +17,8 @@ function generateNavBar(activePage) {
             url: "projects.html"
         },
         {
-            text: "Work",
-            url: "work.html"
+            text: "Timeline",
+            url: "timeline.html"
         },
         {
             text: "About",
