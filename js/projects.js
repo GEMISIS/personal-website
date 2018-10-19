@@ -129,6 +129,12 @@ function generateGithubCards() {
                             list = config_data.projects.concat(github_result.data);
                         }
                         list.sort(function(a, b) {
+                            if (a.pushed_at) {
+                                a.updated_at = a.pushed_at;
+                            }
+                            if (b.pushed_at) {
+                                b.updated_at = b.pushed_at;
+                            }
                             return new Date(b.updated_at) - new Date(a.updated_at);
                         });
                         populateCards(list);
