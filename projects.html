@@ -4,7 +4,8 @@
 <html style="min-height: 100%;">
     <head>
         <link href="css/social.css" rel="stylesheet">
-        <link href="css/theme.css" rel="stylesheet" >
+        <link href="css/theme.css" rel="stylesheet">
+        <link href="css/projects.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" >
         <link src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -13,6 +14,7 @@
 
         <!-- Include these two scripts first since they'll be used later. -->
         <script src="js/core.js"></script>
+        <script src="js/projects.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
@@ -31,11 +33,25 @@
         </header>
 
         <!-- The main part where the content should go! -->
-        <main role="main" class="container">
-            <div class="text-center center-block">
-                <h1>
-                    Website under construction...
-                </h1>
+        <br>
+        <main role="main" class="container" style="margin-bottom: 10%">
+            <div id="project_cards" class="row">
+                <div id="repo_error" class="text-center" style="display: none; margin-left: auto; margin-right: auto;">
+                    <br>
+                    <span>Sorry, the repos couldn't be retrieved</span>
+                    <br>
+                    <span>
+                        <br>This is most likely caused by too many people on your network accessing this page.  Please wait 1 hour to load my projects again.
+                    </span>
+                </div>
+                <div id="projects_error" class="text-center" style="display: none; margin-left: auto; margin-right: auto;">
+                    <br>
+                    <span>No projects to display</span>
+                    <br>
+                    <span>
+                        <br>Please check back at another time.
+                    </span>
+                </div>
             </div>
         </main>
 
@@ -47,6 +63,7 @@
 
         <script>
             setupPage("Projects");
+            generateGithubCards();
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>

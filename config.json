@@ -3,6 +3,7 @@
     "user_email": "me.nospam@gerald.io",
     "formspree_gold": false,
     "user": "Gerald McAlister",
+    "github_username": "gemisis",
     "user_picture": "https://secure.gravatar.com/avatar/8150dfa4d069cdf366386f39cc213327?size=400",
     "user_bio": "Gerald McAlister has been writing software for over a decade now. His latest adventures are currently going on at Amazon, as well as at his own LLC, RGB Schemes, during his spare time.",
     "description": "This is the personal website for Gerald McAlister. Visit it to learn more about who he is and what he does.",
@@ -14,6 +15,23 @@
         "RGB Schemes",
         "video game development",
         "hardware engineer"
+    ],
+    "projects": [
+        {
+            "name": "Sample",
+            "description": "This is a test project.",
+            "language": "None",
+            "repo_url": "testing",
+            "updated_at": "2018-09-05"
+        },
+        {
+            "name": "Sample 2",
+            "description": "This is a test project.",
+            "language": "None",
+            "repo_url": "testing",
+            "download_url": "testing",
+            "updated_at": "2018-09-10"
+        }
     ],
     "contact_subjects": [
         "Job Opportunity",
