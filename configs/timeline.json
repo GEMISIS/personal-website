@@ -1,54 +1,27 @@
 {
-    "static": true,
-    "user_email": "me.nospam@gerald.io",
-    "formspree_gold": false,
-    "user": "Gerald McAlister",
-    "github_username": "gemisis",
-    "user_picture": "https://secure.gravatar.com/avatar/8150dfa4d069cdf366386f39cc213327?size=400",
-    "user_bio": "Gerald McAlister has been writing software for over a decade now. His latest adventures are currently going on at Amazon, as well as at his own LLC, RGB Schemes, during his spare time.",
-    "description": "This is the personal website for Gerald McAlister. Visit it to learn more about who he is and what he does.",
-    "keywords": [
-        "programmer",
-        "software engineer",
-        "Amazon",
-        "Swisslog",
-        "RGB Schemes",
-        "video game development",
-        "hardware engineer"
-    ],
-    "projects": [
-        {
-            "name": "Sample",
-            "description": "This is a test project.",
-            "language": "None",
-            "repo_url": "testing",
-            "updated_at": "2018-09-05"
-        },
-        {
-            "name": "Sample 2",
-            "description": "This is a test project.",
-            "language": "None",
-            "repo_url": "testing",
-            "download_url": "testing",
-            "updated_at": "2018-09-10"
-        }
-    ],
-    "contact_subjects": [
-        "Job Opportunity",
-        "Career Advice",
-        "Old Contact"
-    ],
-    "user_timeline": [
+    "settings": {
+        "chronological": false,
+        "description": ""
+    },
+    "default_icons": {
+        "education": "images/svg/mortar-board.svg",
+        "career": "images/svg/briefcase.svg",
+        "promo": "images/svg/rocket.svg",
+        "experiment": "images/svg/beaker.svg",
+        "achievement": "images/svg/bookmark.svg"
+    },
+    "items": [
         {
             "date": "2010-06",
+            "time": "end",
             "title": "High School Graduation",
             "subtitle": "Mount Vernon High School",
             "type": "education",
-            "image": "https://mountvernonhs.fcps.edu/sites/default/files/logo.png",
             "description": "On this date, I graduated from Mount Vernon High School in Mount Vernon, Virginia. I finished with a GPA of 3.55 and an Advanced Diploma."
         },
         {
             "date": "2011-02",
+            "time": "start",
             "title": "Faculty Support Worker",
             "subtitle": "Christopher Newport University",
             "type": "career",
@@ -57,6 +30,7 @@
         },
         {
             "date": "2012-10",
+            "time": "end",
             "title": "Faculty Support Worker",
             "subtitle": "Christopher Newport University",
             "type": "career",
@@ -65,6 +39,7 @@
         },
         {
             "date": "2012-03",
+            "time": "start",
             "title": "Software Developer Intern",
             "subtitle": "Perfect Commerce",
             "type": "career",
@@ -73,6 +48,7 @@
         },
         {
             "date": "2013-04",
+            "time": "end",
             "title": "Software Developer Intern",
             "subtitle": "Perfect Commerce",
             "type": "career",
@@ -81,22 +57,23 @@
         },
         {
             "date": "2012-10",
+            "time": "start",
             "title": "Software Engineer",
             "subtitle": "CW Optics",
             "type": "career",
-            "image": "http://www.cwoptics.com/img/woundimager.png",
             "description": "Helped to develop the software for usage of the WoundImager device. Implemented various algorithms created by the company, including one which was used to calculate the velocity of blood through wounds on images gathered from the device."
         },
         {
             "date": "2013-04",
+            "time": "end",
             "title": "Software Engineer",
             "subtitle": "CW Optics",
             "type": "career",
-            "image": "http://www.cwoptics.com/img/woundimager.png",
             "description": "Left to explore new opportunities."
         },
         {
             "date": "2014-06",
+            "time": "start",
             "title": "Research and Development Intern",
             "subtitle": "Swisslog",
             "type": "career",
@@ -105,14 +82,15 @@
         },
         {
             "date": "2015-01",
+            "time": "start",
             "title": "Software Engineer",
             "subtitle": "Swisslog",
-            "type": "career",
-            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "type": "promo",
             "description": "Switched from an intern to a full time Software Engineer at Swisslog. Worked on a variety of projects, including continuing R&D work, helping to improve documentation for certain products (reducing setup time by as much 60%), and mainted a 100% deployment success rate with no rollbacks being required for my changes on products."
         },
         {
             "date": "2016-03",
+            "time": "end",
             "title": "Software Engineer",
             "subtitle": "Swisslog",
             "type": "career",
@@ -121,6 +99,7 @@
         },
         {
             "date": "2016-04",
+            "time": "start",
             "title": "Software Development Engineer",
             "subtitle": "Amazon",
             "type": "career",
@@ -129,6 +108,7 @@
         },
         {
             "date": "2014-12",
+            "time": "end",
             "title": "University Graduation",
             "subtitle": "Christopher Newport University",
             "type": "education",
@@ -137,84 +117,12 @@
         },
         {
             "date": "2010-08",
+            "time": "start",
             "title": "Began Undergraduate Degrees",
             "subtitle": "Christopher Newport University",
             "type": "education",
             "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
             "description": "On this date, I began my undergraduate degrees in <b>Computer Engineering</b> and <b>Computer Science</b> at Christopher Newport University."
         }
-    ],
-    "timeline_settings": {
-        "chronological": false,
-        "description": ""
-    },
-    "social_medias": [
-        {
-            "id": "social-fb",
-            "name": "Facebook",
-            "color": "#3B5998",
-            "icon": "fa-facebook-square",
-            "link": "https://www.facebook.com/gerald.mcalister"
-        },
-        {
-            "id": "social-gh",
-            "name": "GitHub",
-            "color": "#323131",
-            "icon": "fa-github-square",
-            "link": "https://www.github.com/gemisis"
-        },
-        {
-            "id": "social-gp",
-            "name": "GooglePlus",
-            "color": "#DC4538",
-            "icon": "fa-google-plus-square",
-            "link": "https://plus.google.com/+GeraldMcAlister"
-        },
-        {
-            "id": "social-ig",
-            "name": "Instagram",
-            "color": "#151424",
-            "icon": "fa-instagram",
-            "link": "https://www.instagram.com/gemisisdev"
-        },
-        {
-            "id": "social-kb",
-            "name": "Keybase",
-            "color": "#ff6f21",
-            "icon": "fa-keybase",
-            "link": "https://keybase.io/gemisis"
-        },
-        {
-            "id": "social-li",
-            "name": "LinkedIn",
-            "color": "#0077B5",
-            "icon": "fa-linkedin-square",
-            "link": "https://www.linkedin.com/in/gemcalister"
-        },
-        {
-            "id": "social-re",
-            "name": "Reddit",
-            "color": "#ff4500",
-            "icon": "fa-reddit-square",
-            "link": "https://www.reddit.com/user/GEMISIS/"
-        },
-        {
-            "id": "social-tw",
-            "name": "Twitter",
-            "color": "#4099FF",
-            "icon": "fa-twitter-square",
-            "link": "https://www.twitter.com/gemisisDev"
-        },
-        {
-            "id": "social-yt",
-            "name": "YouTube",
-            "color": "#FF0000",
-            "icon": "fa-youtube-square",
-            "link": "https://www.youtube.com/user/geraldmcalister"
-        }
-    ],
-    "site_keys": {
-        "google_recaptcha_key": "6LdMTnQUAAAAAHvUuNoKQVXbdgqTh1_I1lWtUVb9",
-        "google_site_ver_key": "hApVs1CQ5Bqgldi_rx3-CKRikHGMsw9Ju21EYHgB2sA"
-    }
+    ]
 }

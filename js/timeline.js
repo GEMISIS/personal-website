@@ -14,10 +14,10 @@ var months = [
     ];
 
 function generateTimeline() {
-    $.getJSON('config.json', function(data) {
-        var timelineItems = data.user_timeline;
+    $.getJSON('configs/timeline.json', function(data) {
+        var timelineItems = data.items;
 
-        if (data.timeline_settings.chronological) {
+        if (data.settings.chronological) {
             timelineItems.sort(function(a, b) {
                 return new Date(a.date) - new Date(b.date);
             });
@@ -27,7 +27,7 @@ function generateTimeline() {
             });
         }
 
-        document.getElementById("timeline_description").innerHTML = data.timeline_settings.description;
+        document.getElementById("timeline_description").innerHTML = data.settings.description;
 
         var inverted = false;
         for (var i = 0;i < timelineItems.length;i++) {
@@ -45,21 +45,43 @@ function generateTimeline() {
             // Create our image area first.
             var imageDiv = document.createElement("div");
             imageDiv.setAttribute("class", "timeline-image");
+            switch(item.time) {
+                default:
+                    imageDiv.style.borderColor = "#3b5998";
+                    imageDiv.style.backgroundColor  = "#3b5998";
+                    break;
+                case "start":
+                    imageDiv.style.borderColor = "#3b5998";
+                    imageDiv.style.backgroundColor  = "#3b5998";
+                    break;
+                case "end":
+                    imageDiv.style.borderColor = "#983b72";
+                    imageDiv.style.backgroundColor  = "#983b72";
+                    break;
+            }
             listItem.appendChild(imageDiv);
 
-            var image = document.createElement("img");
-            image.setAttribute("class", "rounded-circle img-fluid");
             if (item.image !== undefined) {
+                var image = document.createElement("img");
+                image.setAttribute("class", "rounded-circle img-fluid");
                 image.setAttribute("src", item.image);
+                image.setAttribute("alt", item.altText === undefined ? "" : item.altText);
+                imageDiv.appendChild(image);
             } else {
-                switch (item.type) {
-                    default:
-                        image.setAttribute("src", data.user_picture);
-                        break;
-                }
+                var svgTag = document.createElement("svg");
+                svgTag.setAttribute("class", "img-fluid");
+                svgTag.setAttribute("viewBox", "0 0 256 256");
+                svgTag.setAttribute("style", "width: 72%; height: 72%; margin-left: auto; margin-right: auto;");
+                imageDiv.appendChild(svgTag);
+
+                var image = document.createElement("object");
+                image.setAttribute("data", data.default_icons[item.type]);
+                image.setAttribute("type", "image/svg+xml");
+                image.setAttribute("width", "100%");
+                image.setAttribute("height", "100%");
+                image.setAttribute("alt", item.altText === undefined ? "" : item.altText);
+                svgTag.appendChild(image);
             }
-            image.setAttribute("alt", item.altText === undefined ? "" : item.altText);
-            imageDiv.appendChild(image);
 
             // Now create the rest of the panel.
             var timelinePanelDiv = document.createElement("div");

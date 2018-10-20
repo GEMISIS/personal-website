@@ -1,5 +1,5 @@
 function setupAbout(activePage) {
-    $.getJSON('config.json', function(data) {
+    $.getJSON('configs/config.json', function(data) {
         document.getElementById("bio_name").innerHTML = "About " + data.user;
         document.getElementById("bio_pic").setAttribute("src", data.user_picture);
 
@@ -50,7 +50,7 @@ function showToast(message, success) {
 }
 
 function captchaSuccess(grc) {
-    $.getJSON('config.json', function(data) {
+    $.getJSON('configs/config.json', function(data) {
         if (data.static) {
             if (data.formspree_gold) {
                 var form_data = {

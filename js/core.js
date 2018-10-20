@@ -87,7 +87,7 @@ function setupSocialMediaLinks(socialMediaItems, socialMediaDivElement) {
 }
 
 function setupConfig(activePage) {
-    $.getJSON('config.json', function(data) {
+    $.getJSON('configs/config.json', function(data) {
         // Setup our social media links.
         setupSocialMediaLinks(data.social_medias, document.getElementById("social_media_links"));
 
