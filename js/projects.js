@@ -82,19 +82,20 @@ function populateCards(projects) {
         projectContentDiv.appendChild(projectLink);
 
         if (project.releases_url) {
-            $.getJSON({
-                        url: project.releases_url,
-                        async: false
-                    }, function(download_results) {
-                if (download_results.length > 0) {
-                    var result = download_results.pop();
-                    var projectLink = document.createElement("a");
-                    projectLink.setAttribute("href", result.url);
-                    projectLink.setAttribute("target", "_blank");
-                    projectLink.innerHTML = "Download";
-                    projectContentDiv.appendChild(projectLink);
-                }
-            });
+            // Disabled for the time being since this will quickly exceed the GitHub API rate limit.
+            // $.getJSON({
+            //             url: project.releases_url,
+            //             async: false
+            //         }, function(download_results) {
+            //     if (download_results.length > 0) {
+            //         var result = download_results.pop();
+            //         var projectLink = document.createElement("a");
+            //         projectLink.setAttribute("href", result.url);
+            //         projectLink.setAttribute("target", "_blank");
+            //         projectLink.innerHTML = "Download";
+            //         projectContentDiv.appendChild(projectLink);
+            //     }
+            // });
         } else if(project.download_url) {
             var projectLink = document.createElement("a");
             projectLink.setAttribute("href", project.download_url);
@@ -118,6 +119,11 @@ function generateGithubCards() {
             $.getJSON('https://api.github.com/users/' +
                 config_data.github_username +
                 '/repos?sort=updated&callback=?', function(github_result) {
+                    if (!github_result.data.message) {
+                        localStorage["github_repos"] = JSON.stringify(github_result.data);
+                    } else if(localStorage["github_repos"]) {
+                        github_result.data = JSON.parse(localStorage["github_repos"]);
+                    }
                     if(github_result.data.message && !config_data.projects)
                     {
                         document.getElementById("repo_error").style.display = "";
