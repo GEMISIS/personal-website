@@ -6,19 +6,19 @@
         <link href="css/social.css" rel="stylesheet">
         <link href="css/theme.css" rel="stylesheet" >
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" >
-        <link src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Include these two scripts first since they'll be used later. -->
         <script src="js/core.js"></script>
+        <script src="js/home.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- Header, just contains the nav bar. Setup using javascript. -->
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
                 <a id="navbar_brand" class="navbar-brand"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,11 +31,35 @@
         </header>
 
         <!-- The main part where the content should go! -->
-        <main role="main" class="container">
-            <div class="text-center center-block">
-                <h1>
-                    Website under construction...
-                </h1>
+        <main role="main" style="padding: 3.0rem 0rem; margin-bottom: 10%">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div id="picture_frame" class="col-md-4 text-center">
+                        </div>
+                        <div class="col-md-8">
+                            <h1 class="jumbotron-heading">Welcome!</h1>
+                            <p class="lead text-muted">Thanks for checking out my personal website! Use the links above to find what you need, or follow me using the social media links at the foot of any page!</p>
+                            <div id="resume_section">
+                                <hr>
+                                <p class="lead text-muted">Want a copy of my resume? Select a version to download!</p>
+                                <div class="dropdown show">
+                                    <a id="resume_default_item" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Select Resume
+                                    </a>
+                                    <div id="resume_menu" class="dropdown-menu" aira-labelledby="dropdownMenuLink">
+                                    </div>
+                                </div>
+                                <div id="has_contact_info">
+                                     <p class="text-info"><b>Note: </b>Resumes do not contain contact info for privacy reasons.<br>Use the <a href="contact.html">contact form</a> to request a version with it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                Testing this area...
             </div>
         </main>
 
@@ -47,7 +71,9 @@
 
         <script>
             setupPage("Home");
+            populateHome();
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" ></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

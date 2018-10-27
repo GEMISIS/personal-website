@@ -14,7 +14,7 @@ var months = [
     ];
 
 function generateTimeline() {
-    $.getJSON('configs/timeline.json', function(data) {
+    $.getJSON('configs/experience.json', function(data) {
         var timelineItems = data.items;
 
         if (data.settings.chronological) {

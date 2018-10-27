@@ -154,11 +154,13 @@
 /* Medium Devices, .visible-md-* */
 @media (min-width: 992px) and (max-width: 1199px) {
   .timeline > li:nth-child(even) {
+    margin-top: 10%;
     margin-bottom: 0px;
     min-height: 0px;
     right: 0px;
   }
   .timeline > li:nth-child(odd) {
+    margin-top: 10%;
     margin-bottom: 0px;
     min-height: 0px;
     left: 0px;
@@ -239,13 +241,13 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 767px) {
   .timeline > li:nth-child(even) {
-    margin-top: 60%;
+    margin-top: 70%;
     margin-bottom: 0px;
     min-height: 0px;
     right: 0px;
   }
   .timeline > li:nth-child(odd) {
-    margin-top: 60%;
+    margin-top: 70%;
     margin-bottom: 0px;
     min-height: 0px;
     left: 0px;

@@ -1,0 +1,25 @@
+{
+    "hasContactInfo": false,
+    "resumes": [
+        {
+            "file": "mobile-swe.pdf",
+            "title": "Mobile Software Engineer"
+        },
+        {
+            "file": "vr-swe.pdf",
+            "title": "Virtual Reality Software Engineer"
+        },
+        {
+            "file": "mr-swe.pdf",
+            "title": "Mixed Reality Software Engineer"
+        },
+        {
+            "file": "ml-swe.pdf",
+            "title": "Machine Learning Software Engineer"
+        },
+        {
+            "file": "ee-eng.pdf",
+            "title": "Embedded Devices Engineer"
+        }
+    ]
+}

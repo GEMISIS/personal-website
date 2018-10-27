@@ -110,6 +110,11 @@ function populateCards(projects) {
     });
 }
 
+function hideLoadingSpinner() {
+    var loadingSpinnerDiv = document.getElementById("loading_spinner");
+    loadingSpinnerDiv.parentNode.removeChild(loadingSpinnerDiv);
+}
+
 function generateGithubCards() {
     $.getJSON('configs/projects.json', function(config_data) {
         if (config_data.github_username) {
@@ -117,6 +122,8 @@ function generateGithubCards() {
             $.getJSON('https://api.github.com/users/' +
                 config_data.github_username +
                 '/repos?sort=updated&callback=?', function(github_result) {
+                    hideLoadingSpinner();
+
                     if (!github_result.data.message) {
                         localStorage["github_repos"] = JSON.stringify(github_result.data);
                     } else if(localStorage["github_repos"]) {
@@ -145,8 +152,10 @@ function generateGithubCards() {
                     }
             });
         } else if (config_data.projects) {
+            hideLoadingSpinner();
             populateCards(config_data.projects);
         } else {
+            hideLoadingSpinner();
             document.getElementById("projects_error").style.display = "";
         }
     });

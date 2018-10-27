@@ -1,4 +1,4 @@
-function setupAbout(activePage) {
+function setupContact(activePage) {
     $.getJSON('configs/config.json', function(data) {
         document.getElementById("bio_name").innerHTML = "About " + data.user;
         document.getElementById("bio_pic").setAttribute("src", data.user_picture);

@@ -5,7 +5,7 @@
     <head>
         <link href="css/social.css" rel="stylesheet">
         <link href="css/theme.css" rel="stylesheet" >
-        <link href="css/timelines.css" rel="stylesheet" >
+        <link href="css/experience.css" rel="stylesheet" >
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" >
         <link src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" >
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -14,13 +14,13 @@
 
         <!-- Include these two scripts first since they'll be used later. -->
         <script src="js/core.js"></script>
-        <script src="js/timeline.js"></script>
+        <script src="js/experience.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- Header, just contains the nav bar. Setup using javascript. -->
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
                 <a id="navbar_brand" class="navbar-brand"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
         </header>
 
         <!-- The main part where the content should go! -->
-        <main role="main" class="container" style="margin-bottom: 10%">
+        <main role="main" class="container" style="padding: 3.5rem 0.95rem; margin-bottom: 10%">
             <div class="row">
                 <div class="col-xl-15">
                     <h1 class="text-center center-block">Career Timeline</h1>
@@ -49,7 +49,7 @@
         </footer>
 
         <script>
-            setupPage("Timeline");
+            setupPage("Experience");
             generateTimeline();
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

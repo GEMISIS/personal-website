@@ -17,12 +17,12 @@ function generateNavBar(activePage) {
             url: "projects.html"
         },
         {
-            text: "Timeline",
-            url: "timeline.html"
+            text: "Experience",
+            url: "experience.html"
         },
         {
-            text: "About",
-            url: "about.html"
+            text: "Contact",
+            url: "contact.html"
         }
     ];
     links.forEach(function(link) {
