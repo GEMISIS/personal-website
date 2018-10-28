@@ -32,6 +32,7 @@ function populateHome() {
 
 function populateDeck(data) {
     var cardDeckDiv = document.getElementById("card_deck");
+    console.log(data);
 
     for (var i = 0;i < data.items.length && i < 3;i++) {
         var cardDiv = document.createElement("div");
@@ -47,7 +48,15 @@ function populateDeck(data) {
         var height = 300;
         var text = "No Image Found";
         cardImage.setAttribute("style", "width: 100%; height: " + height * 0.69 + "px; object-fit: cover;");
-        cardImage.setAttribute("src", "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20" + width + "%20" + height + "%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166b7013b46%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166b7013b46%22%3E%3Crect%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%" + textX + "%22%20y%3D%" + textY + "%22%3E" + text + "%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        if (data.feed.url.toLowerCase().includes("medium.com")) {
+            cardImage.setAttribute("src", "images/png/medium-white.png");
+        } else if (data.feed.url.toLowerCase().includes("blogspot.com")) {
+            cardImage.setAttribute("src", "images/png/blogger.png");
+        } else if (data.feed.url.toLowerCase().includes("wordpress.com")) {
+            cardImage.setAttribute("src", "images/png/wordpress.png");
+        } else {
+            cardImage.setAttribute("src", "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20" + width + "%20" + height + "%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166b7013b46%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166b7013b46%22%3E%3Crect%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%" + textX + "%22%20y%3D%" + textY + "%22%3E" + text + "%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        }
 
         var img = new Image();
         img.cardImage = cardImage;
@@ -63,12 +72,12 @@ function populateDeck(data) {
         // Create the body.
         var cardBodyDiv = document.createElement("div");
         cardBodyDiv.setAttribute("class", "card-body");
-        cardBodyDiv.setAttribute("style", "max-height: 200px;");
+        cardBodyDiv.setAttribute("style", "min-height: 200px; max-height: 200px;");
         cardDiv.appendChild(cardBodyDiv);
 
         var cardTitle = document.createElement("h5");
         cardTitle.setAttribute("class", "card-title");
-        cardTitle.innerHTML = data.items[i].title.substring(0, 32) + ((data.items[i].title.length >= 32) ? "..." : "");
+        cardTitle.innerHTML = data.items[i].title;
         cardBodyDiv.appendChild(cardTitle);
 
         var cardText = document.createElement("p");
@@ -111,7 +120,7 @@ function populateRSSCards() {
             },
             success: populateDeck,
             error: function(xhr, status) {
-                console.log("Error getting Medium RSS feed!");
+                console.log("Error getting RSS feed!");
             }
         });
     });

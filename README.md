@@ -3,6 +3,13 @@ This is the repository for my personal website. It's designed to be pretty stati
 
 **Note that the email provided in the configuration is an anti-spam email! Do not try to send emails to it.**
 
+## Supported Formats
+### RSS Feeds Default Images
+RSS feeds are supported for any RSS feeds, but this project checks for the following domains, and adds nicer default images if no cover image is provided for a feed item:
+- Medium.com
+- Blogspot.com
+- Wordpress.com
+
 ## Setup
 ### Base Setup
 You will need to do these steps, no matter which setup type you use!

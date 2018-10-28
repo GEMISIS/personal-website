@@ -2,23 +2,23 @@
     "hasContactInfo": false,
     "resumes": [
         {
-            "file": "mobile-swe.pdf",
+            "file": "resumes/mobile-swe.pdf",
             "title": "Mobile Software Engineer"
         },
         {
-            "file": "vr-swe.pdf",
+            "file": "resumes/vr-swe.pdf",
             "title": "Virtual Reality Software Engineer"
         },
         {
-            "file": "mr-swe.pdf",
+            "file": "resumes/mr-swe.pdf",
             "title": "Mixed Reality Software Engineer"
         },
         {
-            "file": "ml-swe.pdf",
+            "file": "resumes/ml-swe.pdf",
             "title": "Machine Learning Software Engineer"
         },
         {
-            "file": "ee-eng.pdf",
+            "file": "resumes/ee-eng.pdf",
             "title": "Embedded Devices Engineer"
         }
     ]
