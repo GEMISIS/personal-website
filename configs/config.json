@@ -41,13 +41,6 @@
             "link": "https://www.github.com/gemisis"
         },
         {
-            "id": "social-gp",
-            "name": "GooglePlus",
-            "color": "#DC4538",
-            "icon": "fa-google-plus-square",
-            "link": "https://plus.google.com/+GeraldMcAlister"
-        },
-        {
             "id": "social-ig",
             "name": "Instagram",
             "color": "#151424",
@@ -65,7 +58,7 @@
             "id": "social-li",
             "name": "LinkedIn",
             "color": "#0077B5",
-            "icon": "fa-linkedin-square",
+            "icon": "fa-linkedin",
             "link": "https://www.linkedin.com/in/gemcalister"
         },
         {
