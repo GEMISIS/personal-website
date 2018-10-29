@@ -5,8 +5,8 @@
     "user": "Gerald McAlister",
     "rss_link": "https://medium.com/feed/@gemisis",
     "user_picture": "https://secure.gravatar.com/avatar/8150dfa4d069cdf366386f39cc213327?size=400",
-    "user_bio": "Gerald McAlister has been writing software for over a decade now. His latest adventures are currently going on at Amazon, as well as at his own LLC, RGB Schemes, during his spare time.",
-    "description": "This is the personal website for Gerald McAlister. Visit it to learn more about who he is and what he does.",
+    "user_bio": "Gerald McAlister has been writing software for over a decade now. Currently, he is helping to bring <a href=\"https://developer.amazon.com/alexa\" target=\"_blank\">Alexa</a> to <a href='https://www.amazon.com/b?node=6669703011' target=\"_blank\">Amazon's Fire Tablets</a> at Amazon during the day. In his spare time, he works on machine learning projects, as well as virtual reality and mixed reality projects through his LLC, <a href='http://www.rgbschemes.com' target='_blank'>RGB Schemes</a>.",
+    "description": "Gerald McAlister is a software engineer currently working at Amazon. Visit this site to learn more about him!",
     "keywords": [
         "programmer",
         "software engineer",
@@ -14,15 +14,20 @@
         "Swisslog",
         "RGB Schemes",
         "video game development",
-        "hardware engineer"
+        "hardware engineer",
+        "virtual reality",
+        "mixed reality",
+        "machine learning",
+        "artificial intelligence"
     ],
     "site_keys": {
         "google_recaptcha_key": "6LdMTnQUAAAAAHvUuNoKQVXbdgqTh1_I1lWtUVb9",
         "google_site_ver_key": "hApVs1CQ5Bqgldi_rx3-CKRikHGMsw9Ju21EYHgB2sA"
     },
     "contact_subjects": [
-        "Job Opportunity",
+        "Speaker Request",
         "Career Advice",
+        "Job Opportunity",
         "Old Contact"
     ],
     "social_medias": [

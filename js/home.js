@@ -78,12 +78,14 @@ function populateDeck(data) {
         var cardTitle = document.createElement("h5");
         cardTitle.setAttribute("class", "card-title");
         cardTitle.innerHTML = data.items[i].title;
+        cardTitle.innerHTML = cardTitle.innerText;
         cardBodyDiv.appendChild(cardTitle);
 
         var cardText = document.createElement("p");
         cardText.setAttribute("class", "card-text");
         cardText.setAttribute("style", "height: 100px; min-height: 100px; max-height: 100px; overflow: hidden;");
-        cardText.innerHTML = data.items[i].description.substring(0, 165) + "...";
+        cardText.innerHTML = data.items[i].description;
+        cardText.innerHTML = cardText.innerText.substring(0, 165) + ((cardText.innerText.length >= 165) ? "..." : "");
         cardBodyDiv.appendChild(cardText);
 
         // Link should go in a separate div to ensure it is at the bottom.
