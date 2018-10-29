@@ -48,11 +48,11 @@ function populateDeck(data) {
         var height = 300;
         var text = "No Image Found";
         cardImage.setAttribute("style", "width: 100%; height: " + height * 0.69 + "px; object-fit: cover;");
-        if (data.feed.url.toLowerCase().includes("medium.com")) {
+        if (data.feed.url.toLowerCase().indexOf("medium.com") > -1) {
             cardImage.setAttribute("src", "images/png/medium-white.png");
-        } else if (data.feed.url.toLowerCase().includes("blogspot.com")) {
+        } else if (data.feed.url.toLowerCase().indexOf("blogspot.com") > -1) {
             cardImage.setAttribute("src", "images/png/blogger.png");
-        } else if (data.feed.url.toLowerCase().includes("wordpress.com")) {
+        } else if (data.feed.url.toLowerCase().indexOf("wordpress.com") > -1) {
             cardImage.setAttribute("src", "images/png/wordpress.png");
         } else {
             cardImage.setAttribute("src", "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20" + width + "%20" + height + "%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166b7013b46%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166b7013b46%22%3E%3Crect%20width%3D%22" + width + "%22%20height%3D%22" + height + "%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%" + textX + "%22%20y%3D%" + textY + "%22%3E" + text + "%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
@@ -72,7 +72,7 @@ function populateDeck(data) {
         // Create the body.
         var cardBodyDiv = document.createElement("div");
         cardBodyDiv.setAttribute("class", "card-body");
-        cardBodyDiv.setAttribute("style", "min-height: 200px; max-height: 200px;");
+        cardBodyDiv.setAttribute("style", "min-height: 200px; max-height: 200px; overflow: hidden;");
         cardDiv.appendChild(cardBodyDiv);
 
         var cardTitle = document.createElement("h5");
@@ -83,9 +83,11 @@ function populateDeck(data) {
 
         var cardText = document.createElement("p");
         cardText.setAttribute("class", "card-text");
-        cardText.setAttribute("style", "height: 100px; min-height: 100px; max-height: 100px; overflow: hidden;");
+        // cardText.setAttribute("style", "overflow: hidden; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.99999),  rgba(0, 0, 0, 0.0)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;");
+        cardText.setAttribute("style", "display: flex; overflow: hidden;");
         cardText.innerHTML = data.items[i].description;
-        cardText.innerHTML = cardText.innerText.substring(0, 165) + ((cardText.innerText.length >= 165) ? "..." : "");
+        cardText.innerHTML = cardText.innerText.substring(0, 200);
+        cardText.innerText += ((cardText.innerText.length >= 200) ? "..." : "");
         cardBodyDiv.appendChild(cardText);
 
         // Link should go in a separate div to ensure it is at the bottom.
