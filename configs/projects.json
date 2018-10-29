@@ -17,6 +17,7 @@
             "name": "Error",
             "description": "A simple WebGL first person shooter using ThreeJS and PhysiJS. The idea behind this was to give users the ability to play entire games inside their web browser natively. Created in less than 24 hours. You can play it in your web browser <a href=\"http://geraldmcalister.com/Error/\" target=\"_blank\">here</a>.",
             "language": "HTML",
+            "repo_url": "https://github.com/GEMISIS/Error",
             "image_url": "http://geraldmcalister.com/img/projects/error/screenshot2.png",
             "updated_at": "2015-03-02"
         },
