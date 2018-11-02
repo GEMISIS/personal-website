@@ -132,7 +132,6 @@ function populateCards(projects) {
                         continue;
                     }
                     var mediaID = project.media_urls[i].url.match(imageRegEx);
-                    console.log(mediaID);
                     if (mediaID) {
                         mediaIDs.push(project.media_urls[i].url);
                         mediaTitles.push(project.media_urls[i].title);
@@ -241,7 +240,7 @@ function generateImage(imageURL) {
     imageElement.setAttribute("id", "modalImage");
     imageElement.setAttribute("src", imageURL);
     imageElement.setAttribute("class", "d-block mx-auto");
-    imageElement.setAttribute("style", "max-width: 100%; max-height: 27em;");
+    imageElement.setAttribute("style", "max-width: 100%; max-height: 100%;");
     return imageElement;
 }
 
@@ -257,6 +256,8 @@ function generateNativeVideo(videoURL) {
     return videoElement;
 }
 
+var activeTabTag = null;
+
 function setupModal() {
     $('#mediaModal').on("show.bs.modal", function(event) {
         var button = $(event.relatedTarget);
@@ -267,10 +268,17 @@ function setupModal() {
         var modal = $(this);
         modal.find("#modalTitle").text(modalTitle + " Media");
 
+        // if the active tab isn't found, then we're probably on a different media tab.
+        if (mediaIDs.indexOf(activeTabTag) < 0) {
+            activeTabTag = null;
+        }
+
         for (var i = 0; i < mediaIDs.length; i++) {
             var mediaID = mediaIDs[i];
             var mediaTitle = mediaTitles[i];
             var mediaType = mediaTypes[i];
+            var tabTag = mediaID;
+            var tabIsActive = ((activeTabTag === null && i === 0) || tabTag == activeTabTag);
 
             // Create our tab first.
             var navItem = document.createElement("li");
@@ -278,37 +286,41 @@ function setupModal() {
             modal.find("#mediaModalTabs").append(navItem);
 
             var navLink = document.createElement("a");
-            navLink.setAttribute("class", "nav-link" + ((i === 0) ? " active" : ""));
+            navLink.setAttribute("class", "nav-link" + (tabIsActive ? " active" : ""));
             navLink.setAttribute("id", mediaID + "-tab");
+            navLink.setAttribute("tag", tabTag);
             navLink.setAttribute("data-toggle", "tab");
             navLink.setAttribute("href", "#" + mediaID + "-panel");
             navLink.setAttribute("role", "tab");
             navLink.setAttribute("aria-controls", mediaID + "-panel");
-            navLink.setAttribute("aria-selected", ((i === 0) ? "true" : "false"));
+            navLink.setAttribute("aria-selected", (tabIsActive ? "true" : "false"));
             navLink.innerText = mediaTitle;
             navItem.appendChild(navLink);
 
             // Now create the tabs panael to display the media in.
             var mediaTabDiv = document.createElement("div");
-            mediaTabDiv.setAttribute("class", "tab-pane fade" + ((i === 0) ? " show active" : ""));
+            mediaTabDiv.setAttribute("class", "tab-pane fade" + (tabIsActive ? " show active" : ""));
             mediaTabDiv.setAttribute("id", mediaID + "-panel");
             mediaTabDiv.setAttribute("role", "tabpanel");
             mediaTabDiv.setAttribute("aria-labelledby", mediaID + "-tab");
-            mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;");
             modal.find("#mediaModalBody").append(mediaTabDiv);
 
             switch(mediaType) {
                 case "vimeo":
+                    mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 100%; padding-bottom: 56.5%;");
                     mediaTabDiv.appendChild(generateVimeoIFrame(mediaID));
                     break;
                 case "nativeVideo":
+                    mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 100%; padding-bottom: 56.5%;");
                     mediaTabDiv.appendChild(generateNativeVideo(mediaID));
                     break;
                 case "image":
+                    mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 100%; padding-bottom: 0%;");
                     mediaTabDiv.appendChild(generateImage(mediaID));
                     break;
                 case "youtube":
                 default:
+                    mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 100%; padding-bottom: 56.5%;");
                     mediaTabDiv.appendChild(generateYouTubeIFrame(mediaID));
                     break;
             }
@@ -316,6 +328,7 @@ function setupModal() {
     });
     $('#mediaModal').on("hide.bs.modal", function(event) {
         var modal = $(this);
+        activeTabTag = $("ul#mediaModalTabs").find(".active").attr("tag");
         // Remove all tabs and anything in the bodies so that videos stop playing.
         modal.find("#mediaModalTabs").empty();
         modal.find("#mediaModalBody").empty();
