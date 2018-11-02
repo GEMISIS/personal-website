@@ -100,8 +100,19 @@
             "download_url": "https://play.google.com/store/apps/details?id=com.cardboardmoonwalk&hl=en_US",
             "media_urls": [
                 {
-                    "title": "Screenshot",
-                    "url": "https://lh3.ggpht.com/35WnYrGYGvbQ8RPeZ8WEZIFIiJVYi0rnzkiyRTpyFJAh3FkWa8EPtdl4TqHwSfvyaT0=w1442-h784"
+                    "title": "Screenshot 1",
+                    "url": "https://lh3.ggpht.com/aD7Wy4RPieGXHVJp4fZksQMvgbt0nidcqQD4KOvv7ebNcwV1HAqPPvdVIDvsVpc6B2o=w1440-h759",
+                    "type": "image"
+                },
+                {
+                    "title": "Screenshot 2",
+                    "url": "https://lh3.ggpht.com/35WnYrGYGvbQ8RPeZ8WEZIFIiJVYi0rnzkiyRTpyFJAh3FkWa8EPtdl4TqHwSfvyaT0=w1442-h784",
+                    "type": "image"
+                },
+                {
+                    "title": "Screenshot 3",
+                    "url": "https://lh3.ggpht.com/qDLjU6MUX8AubkPn1xaJdDePBAa_4wRu1c5Of4byJ6rzrWuCLc6JLVbl-iazgQgcTkgw=w1440-h759",
+                    "type": "image"
                 }
             ],
             "updated_at": "2015-10-17"
@@ -113,8 +124,16 @@
             "repo_url": "https://github.com/GEMISIS/ASM-Interpreter",
             "media_urls": [
                 {
-                    "title": "Screenshot",
+                    "title": "Screenshot 1",
                     "url": "https://raw.githubusercontent.com/gemisis/ASM-Interpreter/master/ASM-Interpreter-DS/ScreenShots/Screenshot%2011.png"
+                },
+                {
+                    "title": "Screenshot 2",
+                    "url": "https://raw.githubusercontent.com/gemisis/ASM-Interpreter/master/ASM-Interpreter-DS/ScreenShots/Screenshot%209.png"
+                },
+                {
+                    "title": "Screenshot 3",
+                    "url": "https://raw.githubusercontent.com/gemisis/ASM-Interpreter/master/ASM-Interpreter-DS/ScreenShots/Screnshot%207.png"
                 }
             ],
             "updated_at": "2013-08-06"
@@ -145,7 +164,7 @@
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Project-Virtua",
             "media_url": {
-                "title": "Livestreamed Development",
+                "title": "Demo Video",
                 "url": "https://www.youtube.com/watch?v=gZgUJTvzM50"
             },
             "updated_at": "2014-09-14"
@@ -170,7 +189,7 @@
         },
         {
             "name": "Santa's Sleigh Ride",
-            "description": "A holiday themed game I made for my Twitch game development livestream. Built using C++ and SFML.",
+            "description": "A holiday themed game I made for my Twitch game development livestream. Built using C++ and SFML. Unfortunately the video of this was lost to time.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Santas-Sleigh-Ride",
             "updated_at": "2014-12-27"
@@ -285,6 +304,24 @@
             "name": "Rock, Paper, Scissors, Lizard, Spock DS",
             "description": "A version of Rock, Paper, Scissors, Lizard Spock for the Nintendo DS. The game is based off of the one of the same name in the TV show \"The Big Bang Theory\"",
             "language": "C",
+            "media_urls": [
+                {
+                    "title": "Win Screenshot 1",
+                    "url": "https://raw.githubusercontent.com/GEMISIS/RPSLS-DS/master/RPSLS/ScreenShots/Lizard%20beats%20spock.png"
+                },
+                {
+                    "title": "Win Screenshot 2",
+                    "url": "https://raw.githubusercontent.com/GEMISIS/RPSLS-DS/master/RPSLS/ScreenShots/Paper%20beats%20Rock.png"
+                },
+                {
+                    "title": "Lose Screenshot",
+                    "url": "https://raw.githubusercontent.com/GEMISIS/RPSLS-DS/master/RPSLS/ScreenShots/Lizard%20beats%20spock%20me.png"
+                },
+                {
+                    "title": "Multiplayer Screenshot",
+                    "url": "https://raw.githubusercontent.com/GEMISIS/RPSLS-DS/master/RPSLS/ScreenShots/Multiplayer%20Default.png"
+                }
+            ],
             "repo_url": "https://github.com/GEMISIS/RPSLS-DS",
             "updated_at": "2013-07-15"
         },

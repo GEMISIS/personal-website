@@ -111,28 +111,28 @@ function populateCards(projects) {
                 var imageRegEx = /^.*(.png|.jpg|.jpeg)([^#\&\?]*).*/;
                 for (var i = 0; i < project.media_urls.length; i++) {
                     var mediaID = project.media_urls[i].url.match(youtubeRegEx);
-                    if (mediaID && mediaID[2].length === 11) {
+                    if ((mediaID && mediaID[2].length === 11) || project.media_urls[i].type === "youtube") {
                         mediaIDs.push(mediaID[2]);
                         mediaTitles.push(project.media_urls[i].title);
                         mediaTypes.push("youtube");
                         continue;
                     }
                     var mediaID = project.media_urls[i].url.match(vimeoRegEx);
-                    if (mediaID && mediaID[2].length === 9) {
+                    if ((mediaID && mediaID[2].length === 9) || project.media_urls[i].type === "vimeo") {
                         mediaIDs.push(mediaID[2]);
                         mediaTitles.push(project.media_urls[i].title);
                         mediaTypes.push("vimeo");
                         continue;
                     }
                     var mediaID = project.media_urls[i].url.match(nativeVideoRegEx);
-                    if (mediaID) {
+                    if (mediaID || project.media_urls[i].type === "nativeVideo") {
                         mediaIDs.push(project.media_urls[i].url);
                         mediaTitles.push(project.media_urls[i].title);
                         mediaTypes.push("nativeVideo");
                         continue;
                     }
                     var mediaID = project.media_urls[i].url.match(imageRegEx);
-                    if (mediaID) {
+                    if (mediaID || project.media_urls[i].type === "image") {
                         mediaIDs.push(project.media_urls[i].url);
                         mediaTitles.push(project.media_urls[i].title);
                         mediaTypes.push("image");
