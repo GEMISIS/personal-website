@@ -6,11 +6,24 @@
             "description": "A full-fledged virtual reality game for Oculus Go and GearVR devices. Created under my own LLC, <a href=\"http://www.rgbschemes.com/games/the-guidance-team/\" target=\"_blank\">RGB Schemes</a>. The game is a third person shooter where players progress through levels killing zombies. A pretty straightforwad game.",
             "language": "Unity",
             "download_url": "https://www.oculus.com/experiences/gear-vr/1215714368477357/",
-            "video_url": {
-                "title": "Trailer",
-                "url": "https://www.youtube.com/watch?v=EBU_D3_oZpY"
-            },
-            "image_url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20D.png",
+            "media_urls": [
+                {
+                    "title": "Trailer",
+                    "url": "https://www.youtube.com/watch?v=EBU_D3_oZpY"
+                },
+                {
+                    "title": "Screenshot 1",
+                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20A.png"
+                },
+                {
+                    "title": "Screenshot 2",
+                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20C.png"
+                },
+                {
+                    "title": "Screenshot 3",
+                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20D.png"
+                }
+            ],
             "updated_at": "2018-03-14"
         },
         {
@@ -18,14 +31,24 @@
             "description": "A simple WebGL first person shooter using ThreeJS and PhysiJS. The idea behind this was to give users the ability to play entire games inside their web browser natively. Created in less than 24 hours. You can play it in your web browser <a href=\"http://geraldmcalister.com/Error/\" target=\"_blank\">here</a>.",
             "language": "HTML",
             "repo_url": "https://github.com/GEMISIS/Error",
-            "image_url": "http://geraldmcalister.com/img/projects/error/screenshot2.png",
+            "media_urls": [
+                {
+                    "title": "Screenshot",
+                    "url": "http://geraldmcalister.com/img/projects/error/screenshot2.png"
+                }
+            ],
             "updated_at": "2015-03-02"
         },
         {
             "name": "Test Shooter - Unreal Engine",
             "description": "Another simple first-person shooter, this time created in the Unreal Engine. This was created in under a week and was simply meant to learn how to use Unreal Engine to create games.",
             "language": "Unreal",
-            "image_url": "http://geraldmcalister.com/Test%20Shooter/pic2.png",
+            "media_urls": [
+                {
+                    "title": "Screenshot",
+                    "url": "http://geraldmcalister.com/Test%20Shooter/pic2.png"
+                }
+            ],
             "updated_at": "2015-03-02"
         },
         {
@@ -33,10 +56,10 @@
             "description": "A tutorial for Oculus Touch and created under my LLC, <a href=\"http://www.rgbschemes.com/\" target=\"_blank\">RGB Schemes</a>. It is a sample project for how to use Oculus Touch to create virtual hands that can be used in games and applications. The tutorials (<a href=\"http://www.rgbschemes.com/blog/oculus-touch-and-finger-stuff-part-1/\" target=\"_blank\">Part 1</a> and <a href=\"http://www.rgbschemes.com/blog/oculus-touch-and-finger-stuff-part-2/\" target=\"_blank\">Part 2</a>) for this were based on research done by me for implementing these technologies.",
             "language": "Unity",
             "repo_url": "https://github.com/RGB-Schemes/Rift-Poke",
-            "video_urls": [
+            "media_urls": [
                 {
                     "title": "Avatar Hands Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/02/Final-Results.mp3"
+                    "url": "http://www.rgbschemes.com/uploads/2017/02/Final-Results.mp4"
                 },
                 {
                     "title": "Plain Hands Demo Video",
@@ -45,16 +68,19 @@
                 {
                     "title": "Simple Hands Demo Video",
                     "url": "http://www.rgbschemes.com/uploads/2017/02/Demo.mp4"
+                },
+                {
+                    "title": "Screenshot",
+                    "url": "http://www.rgbschemes.com/uploads/2017/02/Finger-Collisions.png"
                 }
             ],
-            "image_url": "http://www.rgbschemes.com/uploads/2017/02/Finger-Collisions.png",
             "updated_at": "2017-02-19"
         },
         {
             "name": "Vive Toss",
             "description": "A sample application for the HTC Vive and created under my LLC, <a href=\"http://www.rgbschemes.com/\" target=\"_blank\">RGB Schemes</a>. It is a sample project for how to use HTC Vive Wands to interact with objects and teleport between locations. The tutorials (<a href=\"http://www.rgbschemes.com/blog/look-ma-hands/\" target=\"_blank\">Part 1</a> and <a href=\"http://www.rgbschemes.com/blog/laser-lights-and-movement-fights/\" target=\"_blank\">Part 2</a>) for this is based of research done by me for implementing these technologies.",
             "language": "Unity",
-            "video_urls": [
+            "media_urls": [
                 {
                     "title": "Teleport Demo Video",
                     "url": "http://www.rgbschemes.com/uploads/2017/01/Lasers.mp4"
@@ -72,7 +98,12 @@
             "description": "A simple Android application for Google Cardboard. Users are on the surface of the moon and can look around, as well as view their own personal photos.",
             "language": "Android",
             "download_url": "https://play.google.com/store/apps/details?id=com.cardboardmoonwalk&hl=en_US",
-            "image_url": "https://lh3.ggpht.com/35WnYrGYGvbQ8RPeZ8WEZIFIiJVYi0rnzkiyRTpyFJAh3FkWa8EPtdl4TqHwSfvyaT0=w1442-h784",
+            "media_urls": [
+                {
+                    "title": "Screenshot",
+                    "url": "https://lh3.ggpht.com/35WnYrGYGvbQ8RPeZ8WEZIFIiJVYi0rnzkiyRTpyFJAh3FkWa8EPtdl4TqHwSfvyaT0=w1442-h784"
+                }
+            ],
             "updated_at": "2015-10-17"
         },
         {
@@ -80,7 +111,12 @@
             "description": "A simple assembly interpreter for the Nintendo DS. It can be used to learn the basics of assembly and makes use of the dual-screens of the Nintendo DS to allow debugging at the same time.",
             "language": "C",
             "repo_url": "https://github.com/GEMISIS/ASM-Interpreter",
-            "image_url": "https://raw.githubusercontent.com/gemisis/ASM-Interpreter/master/ASM-Interpreter-DS/ScreenShots/Screenshot%2011.png",
+            "media_urls": [
+                {
+                    "title": "Screenshot",
+                    "url": "https://raw.githubusercontent.com/gemisis/ASM-Interpreter/master/ASM-Interpreter-DS/ScreenShots/Screenshot%2011.png"
+                }
+            ],
             "updated_at": "2013-08-06"
         },
         {
@@ -88,7 +124,12 @@
             "description": "This demo allows users to connect a Microsoft Kinect 2.0 sensor to their computer and view various pieces of output for it. Originally written for the alpha product, it should work for the final version as well.",
             "language": "C#",
             "repo_url": "https://github.com/GEMISIS/Kinect-for-Windows-2.0-Demo",
-            "image_url": "https://camo.githubusercontent.com/4a90238b7e120608c9baa25c4340e87eda15bde6/68747470733a2f2f7261772e6769746875622e636f6d2f67656d697369732f4b696e6563742d666f722d57696e646f77732d322e302d44656d6f2f626574612f53637265656e73686f74732f44656d6f25323050696374757265253230322e706e67",
+            "media_urls": [
+                {
+                    "title": "Screenshot",
+                    "url": "https://raw.githubusercontent.com/GEMISIS/Kinect-for-Windows-2.0-Demo/master/Screenshots/Demo%20Picture%202.png"
+                }
+            ],
             "updated_at": "2014-08-29"
         },
         {
@@ -103,7 +144,7 @@
             "description": "A library for creating virtual reality applications on the original Oculus DK1 with a Microsoft Kinect 1.0 sensor. More information can be found at <a href='http://www.projectvirtua.com' target='_blank'>projectvirtua.com</a>. This was created for my Capstone project for my Computer Science degree at Christopher Newport University.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Project-Virtua",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=gZgUJTvzM50"
             },
@@ -121,7 +162,7 @@
             "description": "A second Breakout clone I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Breakin",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=QgEwaGrBh7M"
             },
@@ -139,7 +180,7 @@
             "description": "A simple RPG maze game I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Maze-Game",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=ZJVOSCAJrAw&list=PLOFi3QmBRyyNJnngRAhA_S9I4DOng1O8V"
             },
@@ -150,7 +191,7 @@
             "description": "A simple 2D platformer game I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Jumper",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=wZ20lDFsv9Y"
             },
@@ -161,7 +202,7 @@
             "description": "A simple pong clone I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Ping",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=GHr6rFCPl5k&list=PLOFi3QmBRyyNkW9DcsuwrmezkLJVA0GUE"
             },
@@ -172,10 +213,14 @@
             "description": "A full-fledged 2D platformer I made for my Twitch game development livestream. It was built in 48 hours for an online game jam. The game <a href=\"http://jams.gamejolt.io/letsgojam/games/super-ninja-bears-and-fruit-fun-time/48256\" target=\"_blank\">came in 6th place</a> out of 34 games submitted for <a href=\"http://jams.gamejolt.io/letsgojam/games\" target=\"_blank\">the game jam</a>. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Super-Ninja-Bears-and-Fruit-Fun-Time",
-            "video_urls": [
+            "media_urls": [
                 {
                     "title": "Trailer",
                     "url": "https://www.youtube.com/watch?v=oMjMw0GmDCg"
+                },
+                {
+                    "title": "Screenshot",
+                    "url": "https://m.gjcdn.net/screenshot-thumbnail/1300x2000/98672-v3.jpg"
                 },
                 {
                     "title": "Livestreamed Development",
@@ -183,7 +228,6 @@
                 }
             ],
             "download_url": "https://gamejolt.com/games/super-ninja-bears-and-fruit-fun-time/48256",
-            "image_url": "https://m.gjcdn.net/screenshot-thumbnail/1300x2000/98672-v3.jpg",
             "updated_at": "2015-02-23"
         },
         {
@@ -191,7 +235,7 @@
             "description": "A Space Invaders clone I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Invaded",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=1Txz08T0hjY&list=PLOFi3QmBRyyMYpWkV3NMVoDYBwg1nL0Gl"
             },
@@ -202,7 +246,7 @@
             "description": "A simple RPG game I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Role-Call",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=AYo37MqVGhE&list=PLOFi3QmBRyyPDad8wFU-ipcia6RlU_Z_-"
             },
@@ -213,7 +257,7 @@
             "description": "A simple demo project of how to use Box2D and SFML together.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Box2D-SFML-Demo",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=ZDnnSqs8uhU"
             },
@@ -224,7 +268,7 @@
             "description": "A PacMan-esque clone I made for my Twitch game development livestream. Built using C++ and SFML.",
             "language": "C++",
             "repo_url": "https://github.com/GEMISIS/Grassman",
-            "video_url": {
+            "media_url": {
                 "title": "Livestreamed Development",
                 "url": "https://www.youtube.com/watch?v=k4Z1WMM_o5U"
             },

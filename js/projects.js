@@ -93,78 +93,71 @@ function populateCards(projects) {
             projectTitleHeader.innerHTML = project.name;
             projectContentDiv.appendChild(projectTitleHeader);
 
-            if (project.video_url || project.video_urls) {
-                if (project.video_url) {
-                    if (!project.video_urls) {
-                        project.video_urls = [];
+            if (project.media_url || project.media_urls) {
+                if (project.media_url) {
+                    if (!project.media_urls) {
+                        project.media_urls = [];
                     }
-                    project.video_urls.push(project.video_url);
+                    project.media_urls.push(project.media_url);
                 }
-                var videoIDs = [];
-                var videoTitles = [];
-                var videoTypes = [];
+                var mediaIDs = [];
+                var mediaTitles = [];
+                var mediaTypes = [];
 
                 // Iterate through each id.
                 var youtubeRegEx = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
                 var vimeoRegEx = /^.*(vimeo.com\/|video\/)([^#\&\?]*).*/;
                 var nativeVideoRegEx = /^.*(.mp4|.ogg|.webm)([^#\&\?]*).*/;
-                for (var i = 0; i < project.video_urls.length; i++) {
-                    var videoID = project.video_urls[i].url.match(youtubeRegEx);
-                    if (videoID && videoID[2].length === 11) {
-                        videoIDs.push(videoID[2]);
-                        videoTitles.push(project.video_urls[i].title);
-                        videoTypes.push("youtube");
+                var imageRegEx = /^.*(.png|.jpg|.jpeg)([^#\&\?]*).*/;
+                for (var i = 0; i < project.media_urls.length; i++) {
+                    var mediaID = project.media_urls[i].url.match(youtubeRegEx);
+                    if (mediaID && mediaID[2].length === 11) {
+                        mediaIDs.push(mediaID[2]);
+                        mediaTitles.push(project.media_urls[i].title);
+                        mediaTypes.push("youtube");
                         continue;
                     }
-                    var videoID = project.video_urls[i].url.match(vimeoRegEx);
-                    if (videoID && videoID[2].length === 9) {
-                        videoIDs.push(videoID[2]);
-                        videoTitles.push(project.video_urls[i].title);
-                        videoTypes.push("vimeo");
+                    var mediaID = project.media_urls[i].url.match(vimeoRegEx);
+                    if (mediaID && mediaID[2].length === 9) {
+                        mediaIDs.push(mediaID[2]);
+                        mediaTitles.push(project.media_urls[i].title);
+                        mediaTypes.push("vimeo");
                         continue;
                     }
-                    var videoID = project.video_urls[i].url.match(nativeVideoRegEx);
-                    console.log(videoID);
-                    if (videoID) {
-                        videoIDs.push(project.video_urls[i].url);
-                        videoTitles.push(project.video_urls[i].title);
-                        videoTypes.push("webvideo");
+                    var mediaID = project.media_urls[i].url.match(nativeVideoRegEx);
+                    if (mediaID) {
+                        mediaIDs.push(project.media_urls[i].url);
+                        mediaTitles.push(project.media_urls[i].title);
+                        mediaTypes.push("nativeVideo");
+                        continue;
+                    }
+                    var mediaID = project.media_urls[i].url.match(imageRegEx);
+                    console.log(mediaID);
+                    if (mediaID) {
+                        mediaIDs.push(project.media_urls[i].url);
+                        mediaTitles.push(project.media_urls[i].title);
+                        mediaTypes.push("image");
                         continue;
                     }
                 }
 
                 // Create some space between each URL and create the Video link.
-                if (videoIDs.length > 0) {
-                    var videoSpaceSpan = document.createElement("span");
-                    videoSpaceSpan.innerHTML = " ";
-                    projectContentDiv.appendChild(videoSpaceSpan);
+                if (mediaIDs.length > 0) {
+                    var mediaSpaceSpan = document.createElement("span");
+                    mediaSpaceSpan.innerHTML = " ";
+                    projectContentDiv.appendChild(mediaSpaceSpan);
 
-                    var videoModalLink = document.createElement("a");
-                    videoModalLink.setAttribute("href", "#");
-                    videoModalLink.setAttribute("data-toggle", "modal");
-                    videoModalLink.setAttribute("data-target", "#videoModal");
-                    videoModalLink.setAttribute("data-modal-title", project.name);
-                    videoModalLink.setAttribute("data-video-titles", videoTitles.toString());
-                    videoModalLink.setAttribute("data-video-ids", videoIDs.toString());
-                    videoModalLink.setAttribute("data-video-types", videoTypes.toString());
-                    videoModalLink.innerHTML = "Videos";
-                    projectContentDiv.appendChild(videoModalLink);
+                    var mediaModalLink = document.createElement("a");
+                    mediaModalLink.setAttribute("href", "#");
+                    mediaModalLink.setAttribute("data-toggle", "modal");
+                    mediaModalLink.setAttribute("data-target", "#mediaModal");
+                    mediaModalLink.setAttribute("data-modal-title", project.name);
+                    mediaModalLink.setAttribute("data-media-titles", mediaTitles.toString());
+                    mediaModalLink.setAttribute("data-media-ids", mediaIDs.toString());
+                    mediaModalLink.setAttribute("data-media-types", mediaTypes.toString());
+                    mediaModalLink.innerHTML = "Media";
+                    projectContentDiv.appendChild(mediaModalLink);
                 }
-            }
-
-            if (project.image_url) {
-                var imageSpaceSpan = document.createElement("span");
-                imageSpaceSpan.innerHTML = " ";
-                projectContentDiv.appendChild(imageSpaceSpan);
-
-                var imageModalLink = document.createElement("a");
-                imageModalLink.setAttribute("href", "#");
-                imageModalLink.setAttribute("data-toggle", "modal");
-                imageModalLink.setAttribute("data-target", "#imageModal");
-                imageModalLink.setAttribute("data-image-title", project.name);
-                imageModalLink.setAttribute("data-image-url", project.image_url);
-                imageModalLink.innerHTML = "Images";
-                projectContentDiv.appendChild(imageModalLink);
             }
 
             if (project.html_url || project.repo_url) {
@@ -243,86 +236,89 @@ function generateVimeoIFrame(videoID) {
     return videoIFrame;
 }
 
-function generateWebVideo(videoURL) {
-    var videoIFrame = document.createElement("video");
-    videoIFrame.setAttribute("id", "modalVideo");
-    videoIFrame.setAttribute("src", videoURL);
-    videoIFrame.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0; margin-left: auto; margin-right: auto; display: block;");
-    videoIFrame.setAttribute("controls", "");
-    videoIFrame.setAttribute("allowfullscreen", "");
-    videoIFrame.setAttribute("mozallowfullscreen", "");
-    videoIFrame.setAttribute("webkitallowfullscreen", "");
-    return videoIFrame;
+function generateImage(imageURL) {
+    var imageElement = document.createElement("img");
+    imageElement.setAttribute("id", "modalImage");
+    imageElement.setAttribute("src", imageURL);
+    imageElement.setAttribute("class", "d-block mx-auto");
+    imageElement.setAttribute("style", "max-width: 100%; max-height: 27em;");
+    return imageElement;
+}
+
+function generateNativeVideo(videoURL) {
+    var videoElement = document.createElement("video");
+    videoElement.setAttribute("id", "modalVideo");
+    videoElement.setAttribute("src", videoURL);
+    videoElement.setAttribute("style", "width: 100%; height: 100%; position: absolute; top: 0; left: 0; margin-left: auto; margin-right: auto; display: block;");
+    videoElement.setAttribute("controls", "");
+    videoElement.setAttribute("allowfullscreen", "");
+    videoElement.setAttribute("mozallowfullscreen", "");
+    videoElement.setAttribute("webkitallowfullscreen", "");
+    return videoElement;
 }
 
 function setupModal() {
-    $('#imageModal').on("show.bs.modal", function(event) {
-        var button = $(event.relatedTarget);
-        var imageTitle = button.data("image-title");
-        var imageURL = button.data("image-url");
-        var modal = $(this);
-        console.log("Modal displaying!");
-        console.log("URL: " + imageURL);
-        modal.find("#modalTitle").text(imageTitle + " Images");
-        modal.find("#modalImage").attr("src", imageURL);
-    });
-    $('#videoModal').on("show.bs.modal", function(event) {
+    $('#mediaModal').on("show.bs.modal", function(event) {
         var button = $(event.relatedTarget);
         var modalTitle = button.data("modal-title");
-        var videoTitles = button.data("video-titles").split(",");
-        var videoIDs = button.data("video-ids").toString().split(",");
-        var videoTypes = button.data("video-types").split(",");
+        var mediaTitles = button.data("media-titles").split(",");
+        var mediaIDs = button.data("media-ids").toString().split(",");
+        var mediaTypes = button.data("media-types").split(",");
         var modal = $(this);
-        modal.find("#modalTitle").text(modalTitle + " Videos");
+        modal.find("#modalTitle").text(modalTitle + " Media");
 
-        for (var i = 0; i < videoIDs.length; i++) {
-            var videoID = videoIDs[i];
-            var videoTitle = videoTitles[i];
-            var videoType = videoTypes[i];
+        for (var i = 0; i < mediaIDs.length; i++) {
+            var mediaID = mediaIDs[i];
+            var mediaTitle = mediaTitles[i];
+            var mediaType = mediaTypes[i];
 
             // Create our tab first.
             var navItem = document.createElement("li");
             navItem.setAttribute("class", "nav-item");
-            modal.find("#videoModalTabs").append(navItem);
+            modal.find("#mediaModalTabs").append(navItem);
 
             var navLink = document.createElement("a");
             navLink.setAttribute("class", "nav-link" + ((i === 0) ? " active" : ""));
-            navLink.setAttribute("id", videoID + "-tab");
+            navLink.setAttribute("id", mediaID + "-tab");
             navLink.setAttribute("data-toggle", "tab");
-            navLink.setAttribute("href", "#" + videoID + "-panel");
+            navLink.setAttribute("href", "#" + mediaID + "-panel");
             navLink.setAttribute("role", "tab");
-            navLink.setAttribute("aria-controls", videoID + "-panel");
+            navLink.setAttribute("aria-controls", mediaID + "-panel");
             navLink.setAttribute("aria-selected", ((i === 0) ? "true" : "false"));
-            navLink.innerText = videoTitle;
+            navLink.innerText = mediaTitle;
             navItem.appendChild(navLink);
 
-            // Now create the tabs panael to display the video in.
-            var videoTabDiv = document.createElement("div");
-            videoTabDiv.setAttribute("class", "tab-pane fade" + ((i === 0) ? " show active" : ""));
-            videoTabDiv.setAttribute("id", videoID + "-panel");
-            videoTabDiv.setAttribute("role", "tabpanel");
-            videoTabDiv.setAttribute("aria-labelledby", videoID + "-tab");
-            videoTabDiv.setAttribute("style", "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;");
-            modal.find("#videoModalBody").append(videoTabDiv);
+            // Now create the tabs panael to display the media in.
+            var mediaTabDiv = document.createElement("div");
+            mediaTabDiv.setAttribute("class", "tab-pane fade" + ((i === 0) ? " show active" : ""));
+            mediaTabDiv.setAttribute("id", mediaID + "-panel");
+            mediaTabDiv.setAttribute("role", "tabpanel");
+            mediaTabDiv.setAttribute("aria-labelledby", mediaID + "-tab");
+            mediaTabDiv.setAttribute("style", "position: relative; width: 100%; height: 0; padding-bottom: 56.25%;");
+            modal.find("#mediaModalBody").append(mediaTabDiv);
 
-            switch(videoType) {
+            switch(mediaType) {
                 case "vimeo":
-                    videoTabDiv.appendChild(generateVimeoIFrame(videoID));
+                    mediaTabDiv.appendChild(generateVimeoIFrame(mediaID));
                     break;
-                case "webvideo":
-                    videoTabDiv.appendChild(generateWebVideo(videoID));
+                case "nativeVideo":
+                    mediaTabDiv.appendChild(generateNativeVideo(mediaID));
+                    break;
+                case "image":
+                    mediaTabDiv.appendChild(generateImage(mediaID));
                     break;
                 case "youtube":
                 default:
-                    videoTabDiv.appendChild(generateYouTubeIFrame(videoID));
+                    mediaTabDiv.appendChild(generateYouTubeIFrame(mediaID));
                     break;
             }
         }
     });
-    $('#videoModal').on("hide.bs.modal", function(event) {
+    $('#mediaModal').on("hide.bs.modal", function(event) {
         var modal = $(this);
-        modal.find("#videoModalTabs").empty();
-        modal.find("#videoModalBody").empty();
+        // Remove all tabs and anything in the bodies so that videos stop playing.
+        modal.find("#mediaModalTabs").empty();
+        modal.find("#mediaModalBody").empty();
     });
 }
 
