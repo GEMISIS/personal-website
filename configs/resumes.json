@@ -2,10 +2,6 @@
     "hasContactInfo": false,
     "resumes": [
         {
-            "file": "resumes/mobile-swe.pdf",
-            "title": "Mobile Software Engineer"
-        },
-        {
             "file": "resumes/vr-swe.pdf",
             "title": "Virtual Reality Software Engineer"
         },
@@ -18,8 +14,8 @@
             "title": "Machine Learning Software Engineer"
         },
         {
-            "file": "resumes/ee-eng.pdf",
-            "title": "Embedded Devices Engineer"
+            "file": "resumes/tpm.pdf",
+            "title": "Technical Project Management"
         }
     ]
 }

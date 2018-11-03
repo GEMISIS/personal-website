@@ -29,6 +29,15 @@
             "description": "Began working as a student employee, helping students and faculty with hardware, software, and network issues. Helped with issues in classrooms, residence halls, and other buildings on campus."
         },
         {
+            "date": "2018-03-14",
+            "time": "mid",
+            "title": "The Guidance Team",
+            "subtitle": "RGB Schemes LLC",
+            "type": "career",
+            "image": "http://www.rgbschemes.com/press/The%20Guidance%20Team/images/icon.png",
+            "description": "Released my first game under my LLC, <a href=\"http://www.rgbschemes.com/games/the-guidance-team/\" target=\"_blank\">The Guidance Team</a>, for Oculus Go and GearVR devices. Developed in Unity, I had to ensure the game met <a href=\"https://developer.oculus.com/distribute/latest/concepts/publish-mobile-req/\" target=\"_blank\">strict performance requirements</a> on mobile hardware."
+        },
+        {
             "date": "2012-10",
             "time": "end",
             "title": "Faculty Support Worker",
@@ -107,7 +116,34 @@
             "description": "Working on the Alexa on Tablets to help bring Alexa to Amazon's Fire Tablets. I do a combination of Android development, server-side work, and Android source development."
         },
         {
-            "date": "2014-12",
+            "date": "2016-07",
+            "time": "start",
+            "title": "Founder",
+            "subtitle": "RGB Schemes LLC",
+            "type": "career",
+            "image": "http://www.rgbschemes.com/press/images/icon.png",
+            "description": "Setup an LLC for which to distribute video games I make in my spare time under, as well as learn how to setup an LLC and manage it."
+        },
+        {
+            "date": "2014-04",
+            "time": "mid",
+            "title": "Computer Science Capstone",
+            "subtitle": "Christopher Newport University",
+            "type": "education",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "Completed and presented my computer science capstone project for the completion of my computer science degree. This project was called <a href=\"http://www.projectvirtua.com/\" target=\"_blank\">Project Virtua</a> and was a project to create a library for using the Microsoft Kinect 1.0 and an Oculus DK1."
+        },
+        {
+            "date": "2014-12-01",
+            "time": "mid",
+            "title": "Computer Engineering Capstone",
+            "subtitle": "Christopher Newport University",
+            "type": "education",
+            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "description": "Completed and presented my computer engineering capstone project for the completion of my computer science degree. This project made use of a Microsoft Kinect 2.0 sensor to track how the device moved, attempting to track the position of the device in realtime ."
+        },
+        {
+            "date": "2014-12-02",
             "time": "end",
             "title": "University Graduation",
             "subtitle": "Christopher Newport University",
