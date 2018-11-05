@@ -25,7 +25,7 @@
             "title": "Faculty Support Worker",
             "subtitle": "Christopher Newport University",
             "type": "career",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "Began working as a student employee, helping students and faculty with hardware, software, and network issues. Helped with issues in classrooms, residence halls, and other buildings on campus."
         },
         {
@@ -34,7 +34,7 @@
             "title": "The Guidance Team",
             "subtitle": "RGB Schemes LLC",
             "type": "career",
-            "image": "http://www.rgbschemes.com/press/The%20Guidance%20Team/images/icon.png",
+            "image": "images/custom/tgt-icon.png",
             "description": "Released my first game under my LLC, <a href=\"http://www.rgbschemes.com/games/the-guidance-team/\" target=\"_blank\">The Guidance Team</a>, for Oculus Go and GearVR devices. Developed in Unity, I had to ensure the game met <a href=\"https://developer.oculus.com/distribute/latest/concepts/publish-mobile-req/\" target=\"_blank\">strict performance requirements</a> on mobile hardware."
         },
         {
@@ -43,7 +43,7 @@
             "title": "Faculty Support Worker",
             "subtitle": "Christopher Newport University",
             "type": "career",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "Left to explore new opportunities."
         },
         {
@@ -52,7 +52,7 @@
             "title": "Software Developer Intern",
             "subtitle": "Perfect Commerce",
             "type": "career",
-            "image": "http://saintscapital.com/wp-content/uploads/2015/08/perfect-commerce.png",
+            "image": "images/custom/pc-icon.png",
             "description": "Began working as a Softare Developer Intern at Perfect Commerce (now called proactis). Helped to develop automated test cases in Selenium with Java. Also helped debug, fix, and enhance current and legacy code using ASP.NET in C# and JavaScript."
         },
         {
@@ -61,7 +61,7 @@
             "title": "Software Developer Intern",
             "subtitle": "Perfect Commerce",
             "type": "career",
-            "image": "http://saintscapital.com/wp-content/uploads/2015/08/perfect-commerce.png",
+            "image": "images/custom/pc-icon.png",
             "description": "Left to explore new opportunities."
         },
         {
@@ -86,7 +86,7 @@
             "title": "Research and Development Intern",
             "subtitle": "Swisslog",
             "type": "career",
-            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "image": "images/custom/swiss-icon.jpg",
             "description": "Researched new technologies to use for warehouse management, including hardware, software, usability, ease-of-access, safety, and more. Specifically developed rapid prototypes on hardware such as Google Glass and demonstrated to various executives both at Swisslog and outside of the company."
         },
         {
@@ -103,7 +103,7 @@
             "title": "Software Engineer",
             "subtitle": "Swisslog",
             "type": "career",
-            "image": "https://pbs.twimg.com/profile_images/792023437480955904/DcieooSF_400x400.jpg",
+            "image": "images/custom/swiss-icon.jpg",
             "description": "Left to explore new opportunities."
         },
         {
@@ -112,7 +112,7 @@
             "title": "Software Development Engineer",
             "subtitle": "Amazon",
             "type": "career",
-            "image": "http://mediad.publicbroadcasting.net/p/wkar/files/styles/medium/public/201706/10398927_9465478123_740_n.jpg",
+            "image": "images/custom/amzn-icon.jpg",
             "description": "Working on the Alexa on Tablets to help bring Alexa to Amazon's Fire Tablets. I do a combination of Android development, server-side work, and Android source development."
         },
         {
@@ -121,7 +121,7 @@
             "title": "Founder",
             "subtitle": "RGB Schemes LLC",
             "type": "career",
-            "image": "http://www.rgbschemes.com/press/images/icon.png",
+            "image": "images/custom/rgbs-icon.png",
             "description": "Setup an LLC for which to distribute video games I make in my spare time under, as well as learn how to setup an LLC and manage it."
         },
         {
@@ -130,7 +130,7 @@
             "title": "Computer Science Capstone",
             "subtitle": "Christopher Newport University",
             "type": "education",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "Completed and presented my computer science capstone project for the completion of my computer science degree. This project was called <a href=\"http://www.projectvirtua.com/\" target=\"_blank\">Project Virtua</a> and was a project to create a library for using the Microsoft Kinect 1.0 and an Oculus DK1."
         },
         {
@@ -139,7 +139,7 @@
             "title": "Computer Engineering Capstone",
             "subtitle": "Christopher Newport University",
             "type": "education",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "Completed and presented my computer engineering capstone project for the completion of my computer science degree. This project made use of a Microsoft Kinect 2.0 sensor to track how the device moved, attempting to track the position of the device in realtime ."
         },
         {
@@ -148,7 +148,7 @@
             "title": "University Graduation",
             "subtitle": "Christopher Newport University",
             "type": "education",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "On this date, I completed my undergraduate degrees in <b>Computer Engineering</b> and <b>Computer Science</b> at Christopher Newport University."
         },
         {
@@ -157,7 +157,7 @@
             "title": "Began Undergraduate Degrees",
             "subtitle": "Christopher Newport University",
             "type": "education",
-            "image": "https://www.commonapp.org/files/styles/400-y/public/school/logo/CNU%20logo_8.17.15.jpg?itok=_uJikGxR",
+            "image": "images/custom/cnu-icon.jpg",
             "description": "On this date, I began my undergraduate degrees in <b>Computer Engineering</b> and <b>Computer Science</b> at Christopher Newport University."
         }
     ]

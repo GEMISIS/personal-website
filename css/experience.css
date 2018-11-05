@@ -1,3 +1,10 @@
+.svg-icon {
+    width: 72% !important;
+    height: 72% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .timeline {
     position: relative;
     padding:4px 0 0 0;

@@ -13,30 +13,34 @@
                 },
                 {
                     "title": "Screenshot 1",
-                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20A.png"
+                    "url": "images/custom/tgt-sc1.png"
                 },
                 {
                     "title": "Screenshot 2",
-                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20C.png"
+                    "url": "images/custom/tgt-sc2.png"
                 },
                 {
                     "title": "Screenshot 3",
-                    "url": "http://rgbschemes.com/press/The%20Guidance%20Team/images/Screenshot%20D.png"
+                    "url": "images/custom/tgt-sc3.png"
                 }
             ],
             "updated_at": "2018-03-14"
         },
         {
             "name": "Error",
-            "description": "A simple WebGL first person shooter using ThreeJS and PhysiJS. The idea behind this was to give users the ability to play entire games inside their web browser natively. Created in less than 24 hours. You can play it in your web browser <a href=\"http://geraldmcalister.com/Error/\" target=\"_blank\">here</a>.",
+            "description": "A simple WebGL first person shooter using ThreeJS and PhysiJS. The idea behind this was to give users the ability to play entire games inside their web browser natively. Created in less than 24 hours.",
             "language": "HTML",
             "repo_url": "https://github.com/GEMISIS/Error",
             "media_urls": [
                 {
                     "title": "Screenshot",
-                    "url": "http://geraldmcalister.com/img/projects/error/screenshot2.png"
+                    "url": "images/custom/error-sc1.png"
                 }
             ],
+            "demo_url": {
+                "title": "Demo",
+                "url": "https://geraldmcalister.com/Error/index.html"
+            },
             "updated_at": "2015-03-02"
         },
         {
@@ -46,7 +50,7 @@
             "media_urls": [
                 {
                     "title": "Screenshot",
-                    "url": "http://geraldmcalister.com/Test%20Shooter/pic2.png"
+                    "url": "images/custom/ues-sc1.png"
                 }
             ],
             "updated_at": "2015-03-02"
@@ -59,19 +63,19 @@
             "media_urls": [
                 {
                     "title": "Avatar Hands Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/02/Final-Results.mp4"
+                    "url": "images/custom/avatar-hands-demo.mp4"
                 },
                 {
                     "title": "Plain Hands Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/02/Final-Collisions.mp4"
+                    "url": "images/custom/plain-hands-demo.mp4"
                 },
                 {
                     "title": "Simple Hands Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/02/Demo.mp4"
+                    "url": "images/custom/simple-hands-demo.mp4"
                 },
                 {
                     "title": "Screenshot",
-                    "url": "http://www.rgbschemes.com/uploads/2017/02/Finger-Collisions.png"
+                    "url": "images/custom/finger-model.png"
                 }
             ],
             "updated_at": "2017-02-19"
@@ -83,11 +87,11 @@
             "media_urls": [
                 {
                     "title": "Teleport Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/01/Lasers.mp4"
+                    "url": "images/custom/teleport-demo.mp4"
                 },
                 {
                     "title": "Hands Demo Video",
-                    "url": "http://www.rgbschemes.com/uploads/2017/01/Ball-Throw.mp4"
+                    "url": "images/custom/hands-demo.mp4"
                 }
             ],
             "repo_url": "https://github.com/RGB-Schemes/Vive-Toss",

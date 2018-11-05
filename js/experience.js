@@ -69,9 +69,8 @@ function generateTimeline() {
                 imageDiv.appendChild(image);
             } else {
                 var svgTag = document.createElement("svg");
-                svgTag.setAttribute("class", "img-fluid");
+                svgTag.setAttribute("class", "img-fluid svg-icon");
                 svgTag.setAttribute("viewBox", "0 0 256 256");
-                svgTag.setAttribute("style", "width: 72%; height: 72%; margin-left: auto; margin-right: auto;");
                 imageDiv.appendChild(svgTag);
 
                 var image = document.createElement("object");

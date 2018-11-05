@@ -22,7 +22,8 @@
     ],
     "site_keys": {
         "google_recaptcha_key": "6LdMTnQUAAAAAHvUuNoKQVXbdgqTh1_I1lWtUVb9",
-        "google_site_ver_key": "hApVs1CQ5Bqgldi_rx3-CKRikHGMsw9Ju21EYHgB2sA"
+        "google_site_ver_key": "hApVs1CQ5Bqgldi_rx3-CKRikHGMsw9Ju21EYHgB2sA",
+        "google_site_tracking_id": "UA-47547312-2"
     },
     "contact_subjects": [
         "Speaker Request",

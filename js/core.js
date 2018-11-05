@@ -113,6 +113,19 @@ function setupConfig(activePage) {
         title_tag.innerHTML = pageTitle;
         head.appendChild(title_tag);
 
+        if (data.site_keys.google_site_tracking_id) {
+            var tagManagerScript = document.createElement('script');
+            tagManagerScript.type = "text/javascript";
+            tagManagerScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + data.site_keys.google_site_tracking_id;
+            head.appendChild(tagManagerScript);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', data.site_keys.google_site_tracking_id);
+        }
+
         // Finally set the name used in the top left-hand corner.
         document.getElementById("navbar_brand").innerHTML = data.user
     });
