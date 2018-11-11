@@ -2,6 +2,27 @@
     "github_username": "",
     "projects": [
         {
+            "name": "MNIST Demo",
+            "description": "A very simple example of creating, training, and deploying an MNIST machine learning model. Utilizes Keras in TensorFlow for creating and training the model, TensorFlow JS for the web deployment, and TensorFlow Lite for the Android application.",
+            "language": "Python",
+            "repo_url": "https://github.com/GEMISIS/MNIST",
+            "media_urls": [
+                {
+                    "title": "Web Demo",
+                    "url": "images/custom/mnist-web.png"
+                },
+                {
+                    "title": "Android Demo",
+                    "url": "images/custom/mnist-android.png"
+                }
+            ],
+            "demo_url": {
+                "title": "Demo",
+                "url": "https://geraldmcalister.com/ml/mnist/index.html"
+            },
+            "updated_at": "2018-11-06"
+        },
+        {
             "name": "The Guidance Team",
             "description": "A full-fledged virtual reality game for Oculus Go and GearVR devices. Created under my own LLC, <a href=\"http://www.rgbschemes.com/games/the-guidance-team/\" target=\"_blank\">RGB Schemes</a>. The game is a third person shooter where players progress through levels killing zombies. A pretty straightforwad game.",
             "language": "Unity",

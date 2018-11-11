@@ -275,7 +275,7 @@ function generateDemoIFrame(iFrameSource) {
     videoIFrame.setAttribute("id", "modalDemo");
     videoIFrame.setAttribute("src", iFrameSource);
     videoIFrame.setAttribute("frameborder", "0");
-    videoIFrame.setAttribute("class", "modal-video d-block mx-auto");
+    videoIFrame.setAttribute("class", "modal-demo d-block mx-auto");
     return videoIFrame;
 }
 
