@@ -8,12 +8,20 @@
             "repo_url": "https://github.com/GEMISIS/MNIST",
             "media_urls": [
                 {
-                    "title": "Web Demo",
-                    "url": "images/custom/mnist-web.png"
+                    "title": "Android Demo Landscape",
+                    "url": "https://github.com/GEMISIS/MNIST/raw/master/screenshots/mnist-android-2.png?raw=true"
                 },
                 {
-                    "title": "Android Demo",
-                    "url": "images/custom/mnist-android.png"
+                    "title": "Web Demo 1",
+                    "url": "https://github.com/GEMISIS/MNIST/raw/master/screenshots/mnist-web-1.png?raw=true"
+                },
+                {
+                    "title": "Web Demo 2",
+                    "url": "https://github.com/GEMISIS/MNIST/raw/master/screenshots/mnist-web-2.png?raw=true"
+                },
+                {
+                    "title": "Android Demo Portrait",
+                    "url": "https://github.com/GEMISIS/MNIST/raw/master/screenshots/mnist-android-1.png?raw=true"
                 }
             ],
             "demo_url": {
