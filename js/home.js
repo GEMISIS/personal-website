@@ -39,6 +39,12 @@ function populateDeck(data) {
         cardDiv.setAttribute("class", "card");
         cardDeckDiv.appendChild(cardDiv);
 
+        // Let users click the image to read the article too.
+        var imageLink = document.createElement("a");
+        imageLink.setAttribute("href", data.items[i].link);
+        imageLink.setAttribute("target", "_blank");
+        cardDiv.appendChild(imageLink);
+
         // Create the header image.
         var cardImage = document.createElement("img");
         cardImage.setAttribute("class", "card-img-top");
@@ -67,7 +73,7 @@ function populateDeck(data) {
         });
         // img.src = "https://secure.gravatar.com/avatar/8150dfa4d069cdf366386f39cc213327?size=400";
         img.src = data.items[i].thumbnail;
-        cardDiv.appendChild(cardImage);
+        imageLink.appendChild(cardImage);
 
         // Create the body.
         var cardBodyDiv = document.createElement("div");
