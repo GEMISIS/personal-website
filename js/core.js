@@ -93,6 +93,10 @@ function setupConfig(activePage) {
 
         // Create our page title based on the user from our config and the active page.
         var pageTitle = data.user + " - " + activePage;
+        // If we're on the home page, just use the user's name for better SEO.
+        if (activePage === "Home") {
+            pageTitle = data.user;
+        }
 
         // Get our <head> tag.
         var head = document.getElementsByTagName("head")[0];
