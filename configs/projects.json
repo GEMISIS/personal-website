@@ -2,6 +2,13 @@
     "github_username": "",
     "projects": [
         {
+            "name": "Personal Website",
+            "description": "An update to my personal website, you are currently viewing the results of this project! Designed to be simple and easy to navigate, I've shared the source code with the world on my GitHub page! You can visit <a href=\"https://github.com/GEMISIS/personal-website/wiki\" target=\"_blank\">here</a> for information on how to setup your own version!",
+            "language": "HTML",
+            "repo_url": "https://github.com/GEMISIS/personal-website",
+            "updated_at": "2018-12-19"
+        },
+        {
             "name": "MNIST Demo",
             "description": "A very simple example of creating, training, and deploying an MNIST machine learning model. Utilizes Keras in TensorFlow for creating and training the model, TensorFlow JS for the web deployment, and TensorFlow Lite for the Android application.",
             "language": "Python",
