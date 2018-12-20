@@ -64,7 +64,7 @@ function populateCards(projects) {
                     break;
                 default:
                     type = "default";
-                    languageText = "?";
+                    languageText = languageText.substring(0, 3) + ".";
                     break;
             }
             cardDiv.setAttribute("class", "project project-radius project-" + type);
@@ -106,7 +106,7 @@ function populateCards(projects) {
                 var youtubeRegEx = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
                 var vimeoRegEx = /^.*(vimeo.com\/|video\/)([^#\&\?]*).*/;
                 var nativeVideoRegEx = /^.*(.mp4|.ogg|.webm)([^#\&\?]*).*/;
-                var imageRegEx = /^.*(.png|.jpg|.jpeg)([^#\&\?]*).*/;
+                var imageRegEx = /^.*(.png|.jpg|.jpeg|.gif|.bmp|.svg)([^#\&\?]*).*/;
                 for (var i = 0; i < project.media_urls.length; i++) {
                     var mediaID = project.media_urls[i].url.match(youtubeRegEx);
                     if ((mediaID && mediaID[2].length === 11) || project.media_urls[i].type === "youtube") {
