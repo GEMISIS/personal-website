@@ -2,6 +2,31 @@
     "github_username": "",
     "projects": [
         {
+            "name": "Prop Drop",
+            "description": "An Augmented Reality application I created where users can drop virtual objects from <a href=\"https://poly.google.com/\" target=\"_blank\">Google Poly</a> into the real world and take goofy pictures with them. The application is currently available on <a href=\"https://play.google.com/store/apps/details?id=gemisis.propdrop\" target=\"_blank\">Google Play Store</a> with a future version planned for the Apple App Store as a separate project.",
+            "language": "Android",
+            "download_url": "https://play.google.com/store/apps/details?id=gemisis.propdrop",
+            "media_urls": [
+                {
+                    "title": "Video Demo",
+                    "url": "videos/prop-drop-and/demo.mp4"
+                },
+                {
+                    "title": "Sample Image",
+                    "url": "images/custom/prop-drop-and/screen_1.png"
+                },
+                {
+                    "title": "Search UI",
+                    "url": "images/custom/prop-drop-and/screen_4.jpg"
+                },
+                {
+                    "title": "Object Placement",
+                    "url": "images/custom/prop-drop-and/screen_6.jpg"
+                }
+            ],
+            "updated_at": "2018-12-21"
+        },
+        {
             "name": "Personal Website",
             "description": "An update to my personal website, you are currently viewing the results of this project! Designed to be simple and easy to navigate, I've shared the source code with the world on my GitHub page! You can visit <a href=\"https://github.com/GEMISIS/personal-website/wiki\" target=\"_blank\">here</a> for information on how to setup your own version!",
             "language": "HTML",
