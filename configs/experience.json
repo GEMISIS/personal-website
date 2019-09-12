@@ -109,11 +109,28 @@
         {
             "date": "2016-04",
             "time": "start",
-            "title": "Software Development Engineer",
+            "title": "Software Development Engineer I",
             "subtitle": "Amazon",
             "type": "career",
             "image": "images/custom/amzn-icon.jpg",
             "description": "Working on the Alexa on Tablets to help bring Alexa to Amazon's Fire Tablets. I do a combination of Android development, server-side work, and Android source development."
+        },
+        {
+            "date": "2019-07",
+            "time": "start",
+            "title": "Software Development Engineer II",
+            "subtitle": "Amazon",
+            "type": "promo",
+            "description": "Promoted to Software Development Engineer II at Amazon."
+        },
+        {
+            "date": "2019-08",
+            "time": "start",
+            "title": "Software Development Engineer II",
+            "subtitle": "Amazon",
+            "type": "career",
+            "image": "images/custom/amzn-alexa-icon.png",
+            "description": "Moved teams internally at Amazon to the <a href=\"https://developer.amazon.com/alexa\" target=\"_blank\">Alexa Skills Kit (ASK)</a>. I am working with machine learning teams and more to help further develop and improve the developer experience of building skills for Alexa."
         },
         {
             "date": "2016-07",
