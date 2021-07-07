@@ -133,6 +133,24 @@
             "description": "Moved teams internally at Amazon to the <a href=\"https://developer.amazon.com/alexa\" target=\"_blank\">Alexa Skills Kit (ASK)</a>. I am working with machine learning teams and more to help further develop and improve the developer experience of building skills for Alexa."
         },
         {
+            "date": "2021-03",
+            "time": "end",
+            "title": "Software Development Engineer II",
+            "subtitle": "Amazon",
+            "type": "career",
+            "image": "images/custom/amzn-icon.png",
+            "description": "Left Amazon to explore new opportunities."
+        },
+        {
+            "date": "2021-04",
+            "time": "start",
+            "title": "Software Engineer",
+            "subtitle": "Facebook",
+            "type": "career",
+            "image": "images/custom/fb-icon.png",
+            "description": "Joined as an E5 (Senior) software engineer. Working on virtual and augmented reality products as a part of Facebook Reality Labs."
+        },
+        {
             "date": "2016-07",
             "time": "start",
             "title": "Founder",

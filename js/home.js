@@ -11,7 +11,7 @@ function populateHome() {
         welcomeText.innerText = "Welcome to " + data.user + "'" + (data.user.slice(-1) === "s" ? "" : "s") + " website!";
 
         var descriptionText = document.getElementById("description_text");
-        descriptionText.innerText = data.user_bio_brief;
+        descriptionText.innerHTML = data.user_bio_brief;
     });
 
     $.getJSON('configs/resumes.json', function(data) {
