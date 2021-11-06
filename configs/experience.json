@@ -145,10 +145,10 @@
             "date": "2021-04",
             "time": "start",
             "title": "Software Engineer",
-            "subtitle": "Facebook",
+            "subtitle": "Meta",
             "type": "career",
-            "image": "images/custom/fb-icon.png",
-            "description": "Joined as an E5 (Senior) software engineer. Working on virtual and augmented reality products as a part of Facebook Reality Labs."
+            "image": "images/custom/meta-icon.png",
+            "description": "Working on virtual and augmented reality products as a part of Reality Labs at Meta. Specifically contributing to <a href=\"https://uploadvr.com/oculus-pro-cambria-revealed/\" target=\"_blank\">Project Cambria</a> and <a href=\"https://uploadvr.com/meta-ar-glasses-project-nazare/\" target=\"_blank\">Project Nazare</a>, as well as helping maintain existing products like the Oculus Quest 2."
         },
         {
             "date": "2016-07",
