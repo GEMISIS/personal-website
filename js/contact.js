@@ -7,7 +7,7 @@ function setupContact(activePage) {
             var receipt = document.getElementById("contact_send_receipt");
             receipt.parentNode.removeChild(receipt);
             if (!data.formspree_gold) {
-                document.getElementById("contact_form").setAttribute("action", "//formspree.io/" + data.user_email);
+                document.getElementById("contact_form").setAttribute("action", data.formspree_link);
             }
         } else {
             // TODO dynamic
