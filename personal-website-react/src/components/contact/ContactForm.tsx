@@ -95,91 +95,133 @@ export default function ContactForm() {
         onClose={() => setShowToast(false)}
       />
 
-      <Form
-        id="contact_form"
-        onSubmit={handleSubmit}
-        action={formAction}
-        method="POST"
-      >
-        <h2>Contact Me</h2>
+      <div className="well well-sm">
+        <Form
+          id="contact_form"
+          onSubmit={handleSubmit}
+          action={formAction}
+          method="POST"
+          className="container"
+          style={{ marginBottom: '16px' }}
+        >
+          <fieldset>
+            <legend className="text-center">
+              Need to contact me? Use this form!
+            </legend>
 
-        <Form.Group className="mb-3" controlId="contact_name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
+            {/* Hidden field for Formspree */}
+            <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
-        <Form.Group className="mb-3" controlId="contact_email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
+            {/* Name */}
+            <Form.Group className="form-group row">
+              <Form.Label className="col-sm-2 control-label contact_form_label" htmlFor="contact_name">
+                Name
+              </Form.Label>
+              <div className="col-sm-9 input">
+                <Form.Control
+                  type="text"
+                  id="contact_name"
+                  name="name"
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </Form.Group>
 
-        <Form.Group className="mb-3" controlId="contact_subject">
-          <Form.Label>Subject</Form.Label>
-          <Form.Select
-            name="_subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select a subject</option>
-            {config.contact_subjects.map((subject, index) => (
-              <option
-                key={index}
-                value={config.static && !config.formspree_gold ? subject : index}
-              >
-                {subject}
-              </option>
-            ))}
-          </Form.Select>
-        </Form.Group>
+            {/* Email */}
+            <Form.Group className="form-group row">
+              <Form.Label className="col-sm-2 control-label contact_form_label" htmlFor="contact_email">
+                Email
+              </Form.Label>
+              <div className="col-sm-9 input">
+                <Form.Control
+                  type="email"
+                  id="contact_email"
+                  name="email"
+                  placeholder="Your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </Form.Group>
 
-        <Form.Group className="mb-3" controlId="contact_message">
-          <Form.Label>Message</Form.Label>
-          <Form.Control
-            as="textarea"
-            name="message"
-            rows={5}
-            placeholder="Enter your message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
+            {/* Subject */}
+            <Form.Group className="form-group row">
+              <Form.Label className="col-sm-2 control-label contact_form_label" htmlFor="contact_subject">
+                Subject
+              </Form.Label>
+              <div className="col-sm-9 input">
+                <Form.Select
+                  id="contact_subject"
+                  name="_subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select a subject</option>
+                  {config.contact_subjects.map((subject, index) => (
+                    <option
+                      key={index}
+                      value={config.static && !config.formspree_gold ? subject : index}
+                    >
+                      {subject}
+                    </option>
+                  ))}
+                </Form.Select>
+              </div>
+            </Form.Group>
 
-        {useRecaptchaButton ? (
-          <div className="mb-3">
-            <div ref={recaptchaRef}></div>
-          </div>
-        ) : (
-          <Button
-            variant="primary"
-            type="submit"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Sending...' : 'Send Message'}
-          </Button>
-        )}
+            {/* Message */}
+            <Form.Group className="form-group row">
+              <Form.Label className="col-sm-2 control-label contact_form_label" htmlFor="contact_message">
+                Message
+              </Form.Label>
+              <div className="col-sm-9 input">
+                <Form.Control
+                  as="textarea"
+                  id="contact_message"
+                  name="message"
+                  rows={5}
+                  placeholder="Please enter your message here..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </Form.Group>
 
-        {!config.static && (
-          <div className="alert alert-warning mt-3" id="contact_send_receipt">
-            Dynamic mode is not currently supported.
-          </div>
-        )}
-      </Form>
+            {/* Submit button */}
+            <div className="form-check text-center">
+              {!config.static && (
+                <div id="contact_send_receipt" className="form-check form-check-inline">
+                  <input className="form-check-input" name="contact_send_receipt" type="checkbox" defaultChecked />
+                  <label className="form-check-label" htmlFor="contact_send_receipt">Send Receipt</label>
+                  <br />
+                  <br />
+                </div>
+              )}
+              {useRecaptchaButton ? (
+                <div ref={recaptchaRef}></div>
+              ) : (
+                <Button
+                  id="submit_button"
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Submit'}
+                </Button>
+              )}
+              <br />
+              <br />
+            </div>
+          </fieldset>
+        </Form>
+      </div>
     </>
   );
 }

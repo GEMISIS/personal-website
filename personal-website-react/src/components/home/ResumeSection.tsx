@@ -11,16 +11,12 @@ export default function ResumeSection() {
   }
 
   return (
-    <div className="container text-center" style={{ marginTop: '2.5%' }} id="resume_section">
-      <h3>Download My Resume</h3>
-      {!resumes.hasContactInfo && (
-        <p id="has_contact_info">
-          Note: Contact information has not been included in the online version for privacy reasons.
-        </p>
-      )}
-      <Dropdown>
-        <Dropdown.Toggle variant="primary" id="resume_dropdown">
-          Select Resume Type
+    <div id="resume_section">
+      <hr />
+      <p className="lead text-muted">Want a copy of my resume? Select a version to download!</p>
+      <Dropdown className="show">
+        <Dropdown.Toggle variant="secondary" id="resume_default_item">
+          Select Resume
         </Dropdown.Toggle>
         <Dropdown.Menu id="resume_menu">
           {resumes.resumes.map((resume, index) => (
@@ -35,6 +31,14 @@ export default function ResumeSection() {
           ))}
         </Dropdown.Menu>
       </Dropdown>
+      {!resumes.hasContactInfo && (
+        <div id="has_contact_info">
+          <p className="text-info">
+            <b>Note: </b>Resumes do not contain contact info for privacy reasons.<br />
+            Use the <a href="/contact">contact form</a> to request a version with it.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

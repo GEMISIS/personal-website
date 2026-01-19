@@ -20,27 +20,26 @@ export default function Timeline({ experienceConfig }: TimelineProps) {
   });
 
   return (
-    <div className="container">
-      {settings.description && (
-        <div className="text-center mb-4">
+    <div className="row">
+      <div className="col-xl-15">
+        {settings.description && (
           <p
             id="timeline_description"
             dangerouslySetInnerHTML={{ __html: settings.description }}
           />
-        </div>
-      )}
-
-      <ul className="timeline" id="timeline_items">
-        {sortedItems.map((item, index) => (
-          <TimelineItem
-            key={index}
-            item={item}
-            defaultIcons={default_icons}
-            inverted={index % 2 === 1}
-            showLine={index < sortedItems.length - 1}
-          />
-        ))}
-      </ul>
+        )}
+        <ul className="timeline" id="timeline_items">
+          {sortedItems.map((item, index) => (
+            <TimelineItem
+              key={index}
+              item={item}
+              defaultIcons={default_icons}
+              inverted={index % 2 === 1}
+              showLine={index < sortedItems.length - 1}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

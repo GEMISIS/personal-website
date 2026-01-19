@@ -56,18 +56,19 @@ export default function RSSCard({ item, feed }: RSSCardProps) {
   const descriptionWithEllipsis = description + (description.length >= 200 ? '...' : '');
 
   return (
-    <Card style={{ width: '100%', marginBottom: '20px' }}>
+    <Card>
       <a href={item.link} target="_blank" rel="noopener noreferrer">
         <Card.Img
           variant="top"
           src={imageSrc}
           alt={item.title}
+          className="card-img-top"
           style={{ width: '100%', height: '207px', objectFit: 'cover' }}
         />
       </a>
       <Card.Body style={{ minHeight: '200px', maxHeight: '200px', overflow: 'hidden' }}>
-        <Card.Title>{getPlainText(item.title)}</Card.Title>
-        <Card.Text style={{ display: 'flex', overflow: 'hidden' }}>
+        <Card.Title className="card-title">{getPlainText(item.title)}</Card.Title>
+        <Card.Text className="card-text" style={{ display: 'flex', overflow: 'hidden' }}>
           {descriptionWithEllipsis}
         </Card.Text>
       </Card.Body>
@@ -81,7 +82,7 @@ export default function RSSCard({ item, feed }: RSSCardProps) {
           Click to Read
         </a>
       </Card.Body>
-      <Card.Footer>
+      <Card.Footer className="card-footer">
         <small className="text-muted">
           Published: {item.pubDate.split(' ')[0]}
         </small>

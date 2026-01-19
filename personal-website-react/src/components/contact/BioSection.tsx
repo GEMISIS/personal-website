@@ -8,17 +8,16 @@ export default function BioSection() {
   if (!config) return null;
 
   return (
-    <div className="mt-4">
-      <h3>About Me</h3>
-      <div className="text-center mb-3">
-        <img
-          src={config.user_picture}
-          alt={config.user}
-          className="rounded-circle img-fluid"
-          style={{ maxWidth: '200px' }}
-        />
-      </div>
-      <p dangerouslySetInnerHTML={{ __html: config.user_bio }} />
-    </div>
+    <>
+      <img
+        id="bio_pic"
+        src={config.user_picture}
+        alt={config.user}
+        className="col-md-7"
+        style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', borderRadius: '15%' }}
+      />
+      <h1 id="bio_name">About {config.user}</h1>
+      <span id="bio_text" dangerouslySetInnerHTML={{ __html: config.user_bio }} />
+    </>
   );
 }

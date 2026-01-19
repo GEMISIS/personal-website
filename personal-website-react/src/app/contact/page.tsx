@@ -30,14 +30,14 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main role="main" style={{ paddingTop: '3.0rem', marginBottom: '5%' }}>
-        <div className="container" style={{ marginTop: '2.5%' }}>
+      <main role="main" className="container" style={{ padding: '2rem 1rem' }}>
+        <div className="container" style={{ padding: '2rem 1rem', marginTop: '5%', marginBottom: '12%' }}>
           <div className="row">
-            <div className="col-md-8">
-              <ContactForm />
-            </div>
-            <div className="col-md-4">
+            <div className="col-md-6">
               <BioSection />
+            </div>
+            <div className="col-md-6">
+              <ContactForm />
             </div>
           </div>
         </div>

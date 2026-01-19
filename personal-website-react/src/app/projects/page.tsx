@@ -72,13 +72,8 @@ export default function ProjectsPage() {
   return (
     <>
       <Header />
-      <main role="main" style={{ paddingTop: '3.0rem', marginBottom: '5%' }}>
-        <div className="container text-center">
-          <h1 className="display-4">Projects</h1>
-          <p className="lead">
-            A collection of projects I&apos;ve worked on over the years.
-          </p>
-        </div>
+      <main role="main" className="container" style={{ padding: '3.5rem 0.95rem', marginBottom: '10%' }}>
+        <h1 className="text-center center-block" style={{ marginTop: '2%' }}>Projects</h1>
 
         <ProjectGrid projects={allProjects} onMediaClick={handleMediaClick} />
 

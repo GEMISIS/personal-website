@@ -29,14 +29,8 @@ export default function ExperiencePage() {
   return (
     <>
       <Header />
-      <main role="main" style={{ paddingTop: '3.0rem', marginBottom: '5%' }}>
-        <div className="container text-center">
-          <h1 className="display-4">Experience</h1>
-          <p className="lead">
-            My professional journey and educational background.
-          </p>
-        </div>
-
+      <main role="main" className="container" style={{ padding: '3.5rem 0.95rem', marginBottom: '10%' }}>
+        <h1 className="text-center center-block" style={{ marginTop: '2%' }}>Experience Timeline</h1>
         {experience && <Timeline experienceConfig={experience} />}
       </main>
       <Footer />
