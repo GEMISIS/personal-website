@@ -5,28 +5,28 @@ import { useConfig } from '@/context/ConfigContext';
 export default function ResumeSection() {
   const { resumes } = useConfig();
 
+  // Don't show anything if no resumes, but don't return null to avoid layout shift
   if (!resumes || !resumes.resumes || resumes.resumes.length === 0) {
-    return null;
+    return <div id="resume_section" style={{ display: 'none' }} />;
   }
 
   return (
     <div id="resume_section">
       <hr />
       <p className="lead text-muted">Want a copy of my resume? Select a version to download!</p>
-      <div className="dropdown show">
+      <div className="dropdown">
         <a
           id="resume_default_item"
           className="btn btn-secondary dropdown-toggle"
-          href="#"
+          href="javascript:void(0)"
           role="button"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
-          onClick={(e) => e.preventDefault()}
         >
           Select Resume
         </a>
-        <div id="resume_menu" className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div id="resume_menu" className="dropdown-menu" aria-labelledby="resume_default_item">
           {resumes.resumes.map((resume, index) => (
             <a
               key={index}
