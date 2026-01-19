@@ -1,7 +1,6 @@
 'use client';
 
 import { useConfig } from '@/context/ConfigContext';
-import { Dropdown } from 'react-bootstrap';
 
 export default function ResumeSection() {
   const { resumes } = useConfig();
@@ -14,23 +13,33 @@ export default function ResumeSection() {
     <div id="resume_section">
       <hr />
       <p className="lead text-muted">Want a copy of my resume? Select a version to download!</p>
-      <Dropdown className="show">
-        <Dropdown.Toggle variant="secondary" id="resume_default_item">
+      <div className="dropdown show">
+        <a
+          id="resume_default_item"
+          className="btn btn-secondary dropdown-toggle"
+          href="#"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          onClick={(e) => e.preventDefault()}
+        >
           Select Resume
-        </Dropdown.Toggle>
-        <Dropdown.Menu id="resume_menu">
+        </a>
+        <div id="resume_menu" className="dropdown-menu" aria-labelledby="dropdownMenuLink">
           {resumes.resumes.map((resume, index) => (
-            <Dropdown.Item
+            <a
               key={index}
+              className="dropdown-item"
               href={resume.file}
               target="_blank"
               rel="noopener noreferrer"
             >
               {resume.title}
-            </Dropdown.Item>
+            </a>
           ))}
-        </Dropdown.Menu>
-      </Dropdown>
+        </div>
+      </div>
       {!resumes.hasContactInfo && (
         <div id="has_contact_info">
           <p className="text-info">

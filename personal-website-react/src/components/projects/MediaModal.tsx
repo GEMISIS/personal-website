@@ -123,6 +123,13 @@ export default function MediaModal({ show, onHide, mediaUrls, projectName }: Med
 
   if (mediaUrls.length === 0) return null;
 
+  // Determine if current media is image to set appropriate height
+  const currentMedia = mediaUrls[activeTab];
+  const currentMediaInfo = detectMediaType(currentMedia?.url || '');
+  const isImage = currentMediaInfo.type === 'image';
+  const modalBodyHeight = isImage ? 'auto' : '500px';
+  const modalBodyMinHeight = isImage ? '300px' : '500px';
+
   return (
     <Modal show={show} onHide={onHide} size="lg" centered>
       <Modal.Header closeButton>
@@ -144,9 +151,25 @@ export default function MediaModal({ show, onHide, mediaUrls, projectName }: Med
           ))}
         </Nav>
       )}
-      <Modal.Body className="tab-content" id="mediaModalBody" style={{ position: 'relative', width: '100%', height: '100%' }}>
+      <Modal.Body
+        className="tab-content"
+        id="mediaModalBody"
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: modalBodyHeight,
+          minHeight: modalBodyMinHeight
+        }}
+      >
         {mediaUrls.map((media, index) => (
-          <div key={index} style={{ display: activeTab === index ? 'block' : 'none' }}>
+          <div
+            key={index}
+            style={{
+              display: activeTab === index ? 'block' : 'none',
+              width: '100%',
+              height: '100%'
+            }}
+          >
             {renderMedia(media, activeTab === index)}
           </div>
         ))}

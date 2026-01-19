@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import { useConfig } from '@/context/ConfigContext';
 
 export default function Header() {
@@ -19,27 +18,37 @@ export default function Header() {
   if (!config) return null;
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-      <Container>
-        <Navbar.Brand as={Link} href="/">
+    <header>
+      <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <Link id="navbar_brand" className="navbar-brand" href="/">
           {config.user}
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+          <ul id="navbar_links" className="navbar-nav mr-auto">
             {navLinks.map((link) => (
-              <Nav.Link
-                key={link.path}
-                as={Link}
-                href={link.path}
-                className={pathname === link.path ? 'active' : ''}
-              >
-                {link.text}
-              </Nav.Link>
+              <li key={link.path} className="nav-item">
+                <Link
+                  href={link.path}
+                  className={`nav-link ${pathname === link.path ? 'active' : ''}`}
+                >
+                  {link.text}
+                </Link>
+              </li>
             ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 }
