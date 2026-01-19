@@ -1,0 +1,9 @@
+{
+    "hasContactInfo": false,
+    "resumes": [
+        {
+            "file": "resumes/swe.pdf",
+            "title": "Software Engineer"
+        }
+    ]
+}

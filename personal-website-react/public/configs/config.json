@@ -1,0 +1,103 @@
+{
+    "static": true,
+    "formspree_link": "https://formspree.io/f/mdkovoen",
+    "formspree_gold": false,
+    "user": "Gerald McAlister",
+    "rss_link": "https://medium.com/feed/@gemisis",
+    "user_picture": "https://secure.gravatar.com/avatar/8150dfa4d069cdf366386f39cc213327?size=400",
+    "user_bio": "Gerald McAlister has been writing software for over a decade now. Currently, he is helping to develop the future of virtual and augmented reality at <a href=\"https://about.facebook.com/realitylabs/\" target=\"_blank\">Meta Reality Labs</a>. In his spare time, he works on small machine learning projects for fun, as well as virtual reality and mixed reality projects through his LLC, <a href='http://www.rgbschemes.com' target='_blank'>RGB Schemes</a>.",
+    "user_bio_brief": "Gerald is a software engineer who has been writing software for over a decade now. Currently, he works full time at <a href=\"https://about.facebook.com/realitylabs/\" target=\"_blank\">Meta Reality Labs</a> in Seattle Washington, while working with virtual reality, mixed reality, and artificial intelligence in his spare time.",
+    "description": "Gerald McAlister is a software engineer with degrees in computer engineering and computer science. He works with virtual reality, mixed reality, and artificial intelligence. Visit this site to learn more about him and see his projects!",
+    "keywords": [
+        "Gerald",
+        "McAlister",
+        "Gerald McAlister",
+        "Jerry",
+        "programmer",
+        "software engineer",
+        "Meta",
+        "Reality Labs",
+        "Metaverse",
+        "Facebook",
+        "Facebook Reality Labs",
+        "FRL",
+        "Amazon",
+        "Swisslog",
+        "RGB Schemes",
+        "video game development",
+        "hardware engineer",
+        "virtual reality",
+        "augmented reality",
+        "mixed reality",
+        "machine learning",
+        "artificial intelligence"
+    ],
+    "site_keys": {
+        "google_recaptcha_key": "6LdMTnQUAAAAAHvUuNoKQVXbdgqTh1_I1lWtUVb9",
+        "google_site_tracking_id": "UA-47547312-2"
+    },
+    "contact_subjects": [
+        "Speaker Request",
+        "Career Advice",
+        "Job Opportunity",
+        "Old Contact"
+    ],
+    "social_medias": [
+        {
+            "id": "social-fb",
+            "name": "Facebook",
+            "color": "#3B5998",
+            "icon": "fa-facebook-square",
+            "link": "https://www.facebook.com/gerald.mcalister"
+        },
+        {
+            "id": "social-gh",
+            "name": "GitHub",
+            "color": "#323131",
+            "icon": "fa-github-square",
+            "link": "https://www.github.com/gemisis"
+        },
+        {
+            "id": "social-ig",
+            "name": "Instagram",
+            "color": "#151424",
+            "icon": "fa-instagram",
+            "link": "https://www.instagram.com/gemisisdev"
+        },
+        {
+            "id": "social-kb",
+            "name": "Keybase",
+            "color": "#ff6f21",
+            "icon": "fa-keybase",
+            "link": "https://keybase.io/gemisis"
+        },
+        {
+            "id": "social-li",
+            "name": "LinkedIn",
+            "color": "#0077B5",
+            "icon": "fa-linkedin",
+            "link": "https://www.linkedin.com/in/gemcalister"
+        },
+        {
+            "id": "social-re",
+            "name": "Reddit",
+            "color": "#ff4500",
+            "icon": "fa-reddit-square",
+            "link": "https://www.reddit.com/user/GEMISIS/"
+        },
+        {
+            "id": "social-tw",
+            "name": "Twitter",
+            "color": "#4099FF",
+            "icon": "fa-twitter-square",
+            "link": "https://www.twitter.com/gemisisDev"
+        },
+        {
+            "id": "social-yt",
+            "name": "YouTube",
+            "color": "#FF0000",
+            "icon": "fa-youtube-square",
+            "link": "https://www.youtube.com/user/geraldmcalister"
+        }
+    ]
+}
